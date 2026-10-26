@@ -1,0 +1,30 @@
+services:
+  eventgenie:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: eventgenie-app
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - GEMINI_MODEL=${GEMINI_MODEL:-gemini-2.5-flash}
+      - ENVIRONMENT=production
+    restart: unless-stopped
+
+  # Optional local development backend service
+  backend-dev:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    profiles: ["dev"]
+    container_name: eventgenie-backend-dev
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/app:/app/app
+    environment:
+      - PORT=8000
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - ENVIRONMENT=development
