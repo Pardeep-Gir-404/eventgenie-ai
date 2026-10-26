@@ -1551,5 +1551,1442 @@
       "signature_moment": "A synchronized toast and confetti burst as the celebration reaches its peak, followed by an open dance floor under starry ambient lights."
     },
     "version": 1
+  },
+  "plan_1792988568_jai": {
+    "id": "plan_1792988568_jai",
+    "created_at": "2026-10-26T09:52:48.103980",
+    "updated_at": "2026-10-26T09:52:48.103980",
+    "request": {
+      "event_type": "wedding",
+      "title": "Aarav & Meera's Regal Heritage Wedding",
+      "city": "Jaipur",
+      "date": "2026-11-20",
+      "guest_count": 150,
+      "total_budget": 1200000.0,
+      "currency": "INR",
+      "theme": "Royal Rajasthani Heritage with Marigold & Terracotta accents",
+      "food_preference": "veg",
+      "setting": "hybrid",
+      "cultural_preferences": "Traditional Rajasthani & Marwari customs, lively Sangeet and Pheras at twilight",
+      "special_requests": "Drone photography for varmala, live folk fusion music, eco-friendly cloth signage"
+    },
+    "ai_reasoning": {
+      "theme_and_cultural_framing": "Tailored for Jaipur with a theme of 'Royal Rajasthani Heritage with Marigold & Terracotta accents'. Incorporates Traditional Rajasthani & Marwari customs, lively Sangeet and Pheras at twilight while ensuring guest comfort and flow.",
+      "budget_strategy": "Budget of 1,200,000.00 INR for 150 attendees gives approximately 8,000.00 per guest. We allocate the largest share to venue and culinary experience with an 8% emergency contingency buffer.",
+      "seasonality_and_weather": "Event scheduled for 2026-11-20 in Jaipur. Outdoor setups are planned with adequate canopy and climate management (patio heaters or high-velocity misting).",
+      "guest_experience_focus": "Prioritizes frictionless arrival, immersive sensory engagement through music and live culinary stations, and memorable take-home tokens.",
+      "risk_mitigation": "Includes vendor contracts with inclement weather backup clauses, guaranteed generator power backup, and dedicated point-of-contact leads."
+    },
+    "budget": {
+      "total_budget": 1200000.0,
+      "currency": "INR",
+      "guest_count": 150,
+      "cost_per_guest": 8000.0,
+      "allocated_total": 1200000.0,
+      "contingency_percentage": 8.0,
+      "contingency_amount": 96000.0,
+      "categories": [
+        {
+          "category": "Venue & Catering",
+          "percentage": 42.0,
+          "amount": 504000.0,
+          "notes": "Primary venue grounds, banquet dining, beverage service",
+          "per_guest_amount": 3360.0
+        },
+        {
+          "category": "Decor & Ambience",
+          "percentage": 16.0,
+          "amount": 192000.0,
+          "notes": "Stage design, floral canopies, fairy lighting, entrance arch",
+          "per_guest_amount": 1280.0
+        },
+        {
+          "category": "Photography & Videography",
+          "percentage": 12.0,
+          "amount": 144000.0,
+          "notes": "Candid shots, cinematic highlights, family portraits",
+          "per_guest_amount": 960.0
+        },
+        {
+          "category": "Entertainment & Music",
+          "percentage": 10.0,
+          "amount": 120000.0,
+          "notes": "Live music band, DJ sound system, celebratory entry accompaniment",
+          "per_guest_amount": 800.0
+        },
+        {
+          "category": "Attire & Styling",
+          "percentage": 6.0,
+          "amount": 72000.0,
+          "notes": "Host styling, traditional drapery, makeup artistry",
+          "per_guest_amount": 480.0
+        },
+        {
+          "category": "Invitations & Favors",
+          "percentage": 4.0,
+          "amount": 48000.0,
+          "notes": "Digital interactive invitations and artisanal gift hampers",
+          "per_guest_amount": 320.0
+        },
+        {
+          "category": "Logistics & Transport",
+          "percentage": 2.0,
+          "amount": 24000.0,
+          "notes": "Guest transit coordination and valet parking support",
+          "per_guest_amount": 160.0
+        },
+        {
+          "category": "Contingency Buffer",
+          "percentage": 8.0,
+          "amount": 96000.0,
+          "notes": "Unforeseen expenses, vendor tips, weather safeguards",
+          "per_guest_amount": 640.0
+        }
+      ],
+      "cost_saving_ideas": [
+        {
+          "id": "saving-1",
+          "title": "Direct Farm / Mandi Flower Sourcing",
+          "description": "Procure focal flowers directly from Jaipur's wholesale wholesale flower market at early dawn instead of markup florists.",
+          "target_category": "Decor & Ambience",
+          "estimated_savings_percentage": 20.0,
+          "estimated_savings_amount": 38400.0,
+          "tradeoff": "Requires transport coordination on the morning of setup."
+        },
+        {
+          "id": "saving-2",
+          "title": "Streamlined Seasonal Culinary Menu",
+          "description": "Focus on 18 deeply flavorful, chef-signature dishes rather than an unmanageable 50-dish buffet that generates waste.",
+          "target_category": "Venue & Catering",
+          "estimated_savings_percentage": 15.0,
+          "estimated_savings_amount": 75600.0,
+          "tradeoff": "Fewer redundant side dishes, but vastly fresher presentation."
+        },
+        {
+          "id": "saving-3",
+          "title": "Digital Motion Video Invites with RSVP Portal",
+          "description": "Use interactive mobile invites with calendar sync buttons instead of bulky printed cards.",
+          "target_category": "Invitations & Favors",
+          "estimated_savings_percentage": 30.0,
+          "estimated_savings_amount": 14400.0,
+          "tradeoff": "No physical paper card, but instantaneous guest RSVP tracking."
+        }
+      ]
+    },
+    "timeline": {
+      "is_rush_plan": false,
+      "days_until_event": 25,
+      "tasks": [
+        {
+          "id": "task-1",
+          "title": "Venue & Date Contract Reservation",
+          "description": "Inspect venue, verify acoustic curfews and fire safety, sign deposit.",
+          "days_before_event": 25,
+          "deadline_date": "2026-10-26",
+          "phase": "Vendor Lock-in",
+          "priority": "High",
+          "owner_suggestion": "Host / Lead Planner",
+          "status": "Not started"
+        },
+        {
+          "id": "task-2",
+          "title": "Catering Menu Tasting & Food Station Design",
+          "description": "Taste signature entrees, arrange live counters, confirm dietary counts.",
+          "days_before_event": 25,
+          "deadline_date": "2026-10-26",
+          "phase": "Food & Beverage",
+          "priority": "High",
+          "owner_suggestion": "Catering Lead",
+          "status": "Not started"
+        },
+        {
+          "id": "task-3",
+          "title": "Decor Concept Walkthrough & 3D Stage Renders",
+          "description": "Review color palettes, lighting cues, stage structure, and fabric swatches.",
+          "days_before_event": 25,
+          "deadline_date": "2026-10-26",
+          "phase": "Decor & Design",
+          "priority": "Medium",
+          "owner_suggestion": "Decor Stylist",
+          "status": "Not started"
+        },
+        {
+          "id": "task-4",
+          "title": "Dispatch Digital Invites & Track RSVPs",
+          "description": "Send WhatsApp / Email invitations with RSVP response links.",
+          "days_before_event": 21,
+          "deadline_date": "2026-10-30",
+          "phase": "Guest Relations",
+          "priority": "High",
+          "owner_suggestion": "Host",
+          "status": "Not started"
+        },
+        {
+          "id": "task-5",
+          "title": "Sound & DJ Playlist Finalization",
+          "description": "Share mandatory songs, do-not-play list, and entrance fanfare audio.",
+          "days_before_event": 14,
+          "deadline_date": "2026-11-06",
+          "phase": "Entertainment",
+          "priority": "Medium",
+          "owner_suggestion": "Entertainment Lead",
+          "status": "Not started"
+        },
+        {
+          "id": "task-6",
+          "title": "Final Headcount Lock & Seating Allocation",
+          "description": "Lock final plate count with caterer and map table assignments.",
+          "days_before_event": 7,
+          "deadline_date": "2026-11-13",
+          "phase": "Operations",
+          "priority": "High",
+          "owner_suggestion": "Host",
+          "status": "Not started"
+        },
+        {
+          "id": "task-7",
+          "title": "Rehearsal & AV Tech Soundcheck",
+          "description": "Test microphones, slide presentations, lighting transitions, and power generator.",
+          "days_before_event": 1,
+          "deadline_date": "2026-11-19",
+          "phase": "Final Prep",
+          "priority": "High",
+          "owner_suggestion": "Production Lead",
+          "status": "Not started"
+        },
+        {
+          "id": "task-8",
+          "title": "Live Event Execution & Stage Management",
+          "description": "Coordinate arrival timings, food service commencement, and signature moments.",
+          "days_before_event": 0,
+          "deadline_date": "2026-11-20",
+          "phase": "Event Day",
+          "priority": "High",
+          "owner_suggestion": "All Leads",
+          "status": "Not started"
+        }
+      ],
+      "completion_percentage": 0.0
+    },
+    "vendor_checklists": [
+      {
+        "id": "chk-venue",
+        "category": "Venue & Banquet Hall",
+        "what_to_ask": [
+          "What is the hard outdoor sound curfew time?",
+          "Is there a dedicated backup generator included for stage AV?",
+          "What are the parking capacity and valet arrangements?"
+        ],
+        "what_to_confirm": [
+          "Access window for morning decor setup (minimum 4 hours before event)",
+          "Bridal/VIP green room availability with air conditioning and lockable storage",
+          "Security guards and perimeter management staff"
+        ],
+        "negotiation_tips": [
+          "Ask for venue cleanup and basic power surcharge fees to be waived",
+          "Negotiate complimentary overnight storage for leftover gifts or decor props"
+        ],
+        "red_flags": [
+          "Unwillingness to provide a written rain/weather emergency backup hall",
+          "Strict penalties without refund clauses for government-mandated curfew shifts"
+        ],
+        "draft_inquiry_message": "Hello! We are planning a 150-guest wedding in Jaipur on 2026-11-20. We would love to enquire about venue availability, hall rental packages, sound limits, and catering guidelines. Please share your brochure and booking terms.",
+        "completed_checks": []
+      },
+      {
+        "id": "chk-catering",
+        "category": "Catering & Culinary Team",
+        "what_to_ask": [
+          "Can you accommodate our veg dietary preferences with dedicated separate cooking stations?",
+          "What is your dedicated waitstaff-to-guest ratio?",
+          "Do you supply food warmers, chafing dishes, and eco-friendly crockery?"
+        ],
+        "what_to_confirm": [
+          "Scheduled pre-booking menu tasting session for 3-4 decision makers",
+          "Freshness guarantee and safe disposal protocols for remaining food",
+          "Live cooking station fire safety compliance"
+        ],
+        "negotiation_tips": [
+          "Request complimentary welcome drink mocktails or tea/coffee counters",
+          "Negotiate free plate count for children under 6 years"
+        ],
+        "red_flags": [
+          "Refusal to let client inspect their central commercial kitchen",
+          "Vague pricing that excludes serving staff or ice bucket charges"
+        ],
+        "draft_inquiry_message": "Namaste! We are seeking an exceptional catering partner for a 150-guest wedding on 2026-11-20 in Jaipur. Our dietary requirement is veg. Please share sample menus and tasting options.",
+        "completed_checks": []
+      },
+      {
+        "id": "chk-photo",
+        "category": "Photography & Cinematography",
+        "what_to_ask": [
+          "How many photographers and cinematographers will be present on-site?",
+          "What is the turnaround time for teaser photos vs full edited cinematic film?",
+          "Do you carry backup camera bodies and dual SD-card slot equipment?"
+        ],
+        "what_to_confirm": [
+          "Delivery of high-resolution uncompressed digital gallery link",
+          "Drone flight permissions in the venue's airspace",
+          "Specific shot list (family portraits, candid moments, decor details)"
+        ],
+        "negotiation_tips": [
+          "Include a 60-second teaser reel for social media within 48 hours",
+          "Bundle pre-event photoshoot into the total contract"
+        ],
+        "red_flags": [
+          "No physical contract or unclear delivery date SLA (over 90 days)",
+          "Subcontracting the actual shoot to junior freelancers unknown to you"
+        ],
+        "draft_inquiry_message": "Hello! We are looking for a photography and cinematography team for our wedding in Jaipur on 2026-11-20 (150 guests). We love candid, natural lighting and cinematic storytelling. Could you share your portfolio and pricing packages?",
+        "completed_checks": []
+      }
+    ],
+    "creative_ideas": {
+      "decor_concept": "Royal Rajasthani Heritage with Marigold & Terracotta accents Elegance: Layered ambient warm fairy lights, botanical greenery runners, brass accent lanterns, and customized monogram signage reflecting Jaipur's vibrant spirit.",
+      "invitation_wording": "Join us in celebrating this joyous milestone in Jaipur. Your presence, laughter, and blessings will make our special day truly complete.",
+      "entertainment": [
+        "Curated high-energy DJ set blending contemporary hits with beloved celebratory classics",
+        "Interactive live acoustic performance during welcome refreshments",
+        "Choreographed group entrance moment with confetti canons and sparkler fountains"
+      ],
+      "games_and_activities": [
+        "Interactive digital trivia quiz on attendees' mobile phones with leaderboard prizes",
+        "Polaroid photo memory guestbook where attendees leave personal handwritten notes",
+        "Signature cocktail/mocktail DIY mixology tasting station"
+      ],
+      "return_gifts_favors": [
+        "Artisanal jars of organic wildflower honey paired with aromatic spices",
+        "Handcrafted fragrant soy wax candles in brass containers",
+        "Customized plantable seed-paper gratitude stationery"
+      ],
+      "curated_menu_highlights": [
+        "Artisanal live Chaat and gourmet flatbread stations with spicy tangy emulsions",
+        "Slow-cooked signature curries accompanied by freshly baked sourdough naans",
+        "Live artisanal dessert counter featuring warm saffron jalebi with pistachio rabdi",
+        "Refreshing botanical mocktails infused with mint, lychee, and fresh lime"
+      ],
+      "photo_booth_concept": "An illuminated Royal Rajasthani Heritage with Marigold & Terracotta accents arch with neon typography, lush floral foliage, and instant dual-print photo strips.",
+      "signature_moment": "A synchronized toast and confetti burst as the celebration reaches its peak, followed by an open dance floor under starry ambient lights."
+    },
+    "version": 1
+  },
+  "plan_1792990180_jai": {
+    "id": "plan_1792990180_jai",
+    "created_at": "2026-10-26T10:19:40.884412",
+    "updated_at": "2026-10-26T10:19:40.884412",
+    "request": {
+      "event_type": "wedding",
+      "title": "Aarav & Meera's Regal Heritage Wedding",
+      "city": "Jaipur",
+      "date": "2026-11-20",
+      "guest_count": 150,
+      "total_budget": 1200000.0,
+      "currency": "INR",
+      "theme": "Royal Rajasthani Heritage with Marigold & Terracotta accents",
+      "food_preference": "veg",
+      "setting": "hybrid",
+      "cultural_preferences": "Traditional Rajasthani & Marwari customs, lively Sangeet and Pheras at twilight",
+      "special_requests": "Drone photography for varmala, live folk fusion music, eco-friendly cloth signage"
+    },
+    "ai_reasoning": {
+      "theme_and_cultural_framing": "The 'Royal Rajasthani Heritage with Marigold & Terracotta accents' theme perfectly complements Jaipur's majestic palaces and havelis. We'll integrate traditional Rajasthani and Marwari customs, from the vibrant Sangeet to the sacred twilight Pheras, ensuring cultural authenticity through decor, cuisine, and rituals. Marigold and terracotta provide a warm, earthy, and regal aesthetic.",
+      "budget_strategy": "With 150 guests and a 12 Lakh INR budget (approx. 8,000 INR/guest), the strategy focuses on maximizing impact in core areas like the heritage venue and authentic catering, while finding clever savings in decor (local sourcing) and invitations (eco-friendly digital/cloth). A robust contingency buffer is crucial for a heritage wedding.",
+      "seasonality_and_weather": "November in Jaipur is ideal for weddings, offering pleasant, cool daytime temperatures (around 25-28\u00b0C) and comfortably crisp evenings (12-15\u00b0C). This allows for extensive outdoor celebrations like the Sangeet and Pheras, with minimal weather concerns. Evening events will benefit from soft lighting and perhaps strategically placed outdoor heaters if needed.",
+      "guest_experience_focus": "Guests will be immersed in a truly Rajasthani experience. This includes a lively Sangeet with folk fusion music, a visually stunning Phera ceremony at twilight, and a curated Marwari culinary journey. Interactive elements and thoughtful favors will enhance their connection to the culture and the couple.",
+      "risk_mitigation": "Key risks include sound curfews at heritage venues (addressed by confirming permits), vendor reliability (mitigated by thorough vetting and clear contracts), and potential minor weather fluctuations (though low in November, having a semi-covered backup for specific areas is wise). Eco-friendly choices are integrated to align with the special request and minimize waste."
+    },
+    "budget": {
+      "total_budget": 1200000.0,
+      "currency": "INR",
+      "guest_count": 150,
+      "cost_per_guest": 8000.0,
+      "allocated_total": 1200000.0,
+      "contingency_percentage": 8.0,
+      "contingency_amount": 96000.0,
+      "categories": [
+        {
+          "category": "Venue & Catering",
+          "percentage": 40.0,
+          "amount": 480000.0,
+          "notes": "Securing a heritage haveli or palace garden, and a comprehensive authentic Marwari pure-veg catering package.",
+          "per_guest_amount": 3200.0
+        },
+        {
+          "category": "Decor & Ambience",
+          "percentage": 18.0,
+          "amount": 216000.0,
+          "notes": "Extensive use of marigolds, terracotta pots, traditional fabrics, and ambient lighting to create a regal atmosphere.",
+          "per_guest_amount": 1440.0
+        },
+        {
+          "category": "Photography & Videography",
+          "percentage": 12.0,
+          "amount": 144000.0,
+          "notes": "Includes 2 candid photographers, 1 traditional videographer, and a dedicated drone operator for key moments like varmala.",
+          "per_guest_amount": 960.0
+        },
+        {
+          "category": "Entertainment & Music",
+          "percentage": 10.0,
+          "amount": 120000.0,
+          "notes": "Live folk fusion band for Sangeet, traditional musicians for Pheras, and a DJ for evening dance.",
+          "per_guest_amount": 800.0
+        },
+        {
+          "category": "Attire & Styling",
+          "percentage": 5.0,
+          "amount": 60000.0,
+          "notes": "Focus on bridal and groom's main attire, with provisions for basic styling support.",
+          "per_guest_amount": 400.0
+        },
+        {
+          "category": "Invitations & Favors",
+          "percentage": 4.0,
+          "amount": 48000.0,
+          "notes": "Digital invites with eco-friendly cloth signage and thoughtful, locally sourced return gifts.",
+          "per_guest_amount": 320.0
+        },
+        {
+          "category": "Logistics & Transport",
+          "percentage": 3.0,
+          "amount": 36000.0,
+          "notes": "Local guest shuttles, vendor transport, and any specific cultural processional needs.",
+          "per_guest_amount": 240.0
+        },
+        {
+          "category": "Contingency Buffer",
+          "percentage": 8.0,
+          "amount": 96000.0,
+          "notes": "Essential reserve for unexpected costs, last-minute additions, or vendor surcharges.",
+          "per_guest_amount": 640.0
+        }
+      ],
+      "cost_saving_ideas": [
+        {
+          "id": "saving-1",
+          "title": "Direct Sourcing of Marigolds & Terracotta",
+          "description": "Procure marigolds directly from Jaipur's local flower markets (Phool Mandi) and terracotta items from nearby artisan villages, bypassing event decorators' markups.",
+          "target_category": "Decor & Ambience",
+          "estimated_savings_percentage": 25.0,
+          "estimated_savings_amount": 54000.0,
+          "tradeoff": "Requires dedicated coordination for early morning pickups and transport, or a local contact with market access."
+        },
+        {
+          "id": "saving-2",
+          "title": "Digital Invites with Eco-Friendly Cloth Signage",
+          "description": "Opt for beautifully designed animated digital invitations via WhatsApp/email. For on-site information, use reusable, hand-painted or block-printed cloth signage instead of expensive printed boards.",
+          "target_category": "Invitations & Favors",
+          "estimated_savings_percentage": 35.0,
+          "estimated_savings_amount": 16800.0,
+          "tradeoff": "May not appeal to guests who prefer traditional physical invites; requires clear digital communication strategy."
+        },
+        {
+          "id": "saving-3",
+          "title": "Utilize In-House Heritage Venue Decor",
+          "description": "Choose a heritage venue that already boasts stunning architecture, frescoes, and traditional elements. Minimize additional decor by strategically highlighting existing features with lighting rather than covering them.",
+          "target_category": "Decor & Ambience",
+          "estimated_savings_percentage": 15.0,
+          "estimated_savings_amount": 32400.0,
+          "tradeoff": "Limits complete creative freedom for decor, as you're working with the venue's existing aesthetic."
+        },
+        {
+          "id": "saving-4",
+          "title": "Curated Buffet-Style Marwari Feast",
+          "description": "Instead of multiple live counters or international cuisines, focus on a lavish, authentic Marwari buffet spread. This allows for bulk preparation and reduces the need for numerous specialized chefs and elaborate plating.",
+          "target_category": "Venue & Catering",
+          "estimated_savings_percentage": 10.0,
+          "estimated_savings_amount": 48000.0,
+          "tradeoff": "May offer less variety for guests seeking non-Indian options, but enhances cultural immersion."
+        }
+      ]
+    },
+    "timeline": {
+      "is_rush_plan": false,
+      "days_until_event": 25,
+      "tasks": [
+        {
+          "id": "task-1",
+          "title": "Finalize Heritage Venue & Catering Contract",
+          "description": "Confirm all inclusions, outdoor space availability, sound curfews, and payment schedule for the chosen haveli/palace.",
+          "days_before_event": 25,
+          "deadline_date": "2026-10-26",
+          "phase": "Foundation & Booking",
+          "priority": "High",
+          "owner_suggestion": "Host & Couple",
+          "status": "Not started"
+        },
+        {
+          "id": "task-2",
+          "title": "Book Photography & Videography Team (with Drone)",
+          "description": "Secure a team experienced with heritage weddings and drone operation, confirm shot lists for Sangeet and Pheras.",
+          "days_before_event": 25,
+          "deadline_date": "2026-10-26",
+          "phase": "Visuals",
+          "priority": "High",
+          "owner_suggestion": "Couple",
+          "status": "Not started"
+        },
+        {
+          "id": "task-3",
+          "title": "Catering Tasting & Menu Finalization",
+          "description": "Conduct a tasting session for the Marwari menu, finalize dishes, and confirm dietary accommodations (Jain, etc.).",
+          "days_before_event": 25,
+          "deadline_date": "2026-10-26",
+          "phase": "Food & Beverage",
+          "priority": "High",
+          "owner_suggestion": "Food Committee",
+          "status": "Not started"
+        },
+        {
+          "id": "task-4",
+          "title": "Select Decor Vendor & Concept Finalization",
+          "description": "Confirm marigold and terracotta decor elements, lighting plan, and eco-friendly signage designs with the decorator.",
+          "days_before_event": 25,
+          "deadline_date": "2026-10-26",
+          "phase": "Aesthetics",
+          "priority": "Medium",
+          "owner_suggestion": "Decor Lead",
+          "status": "Not started"
+        },
+        {
+          "id": "task-5",
+          "title": "Book Entertainment (Folk Fusion & DJ)",
+          "description": "Confirm availability of folk fusion artists for Sangeet and DJ for dance, finalize playlists and performance timings.",
+          "days_before_event": 25,
+          "deadline_date": "2026-10-26",
+          "phase": "Entertainment",
+          "priority": "Medium",
+          "owner_suggestion": "Entertainment Lead",
+          "status": "Not started"
+        },
+        {
+          "id": "task-6",
+          "title": "Send Digital Invitations & RSVP Tracking",
+          "description": "Dispatch animated digital invites and begin tracking RSVPs for final headcount.",
+          "days_before_event": 21,
+          "deadline_date": "2026-10-30",
+          "phase": "Guest Relations",
+          "priority": "High",
+          "owner_suggestion": "Host",
+          "status": "Not started"
+        },
+        {
+          "id": "task-7",
+          "title": "Final Vendor Meetings & Site Walkthrough",
+          "description": "Conduct a comprehensive walkthrough with all key vendors (venue, catering, decor, AV) to confirm setup and flow.",
+          "days_before_event": 7,
+          "deadline_date": "2026-11-13",
+          "phase": "Coordination",
+          "priority": "High",
+          "owner_suggestion": "Lead Planner",
+          "status": "Not started"
+        },
+        {
+          "id": "task-8",
+          "title": "Event Day Execution & Pheras Coordination",
+          "description": "Oversee all setups, guest flow, Sangeet performances, and precise timing for twilight Pheras and drone shots.",
+          "days_before_event": 0,
+          "deadline_date": "2026-11-20",
+          "phase": "Event Day",
+          "priority": "High",
+          "owner_suggestion": "All Team Leads",
+          "status": "Not started"
+        }
+      ],
+      "completion_percentage": 0.0
+    },
+    "vendor_checklists": [
+      {
+        "id": "v-venue",
+        "category": "Venue & Heritage Property",
+        "what_to_ask": [
+          "What are the specific sound curfews for outdoor music at your heritage property?",
+          "Do you have an in-house catering policy or can we bring our preferred Marwari caterer?",
+          "What are the power backup provisions for lighting and AV equipment, especially for outdoor areas?",
+          "Are there designated areas for traditional rituals like Pheras, and what is their capacity?"
+        ],
+        "what_to_confirm": [
+          "Availability of bridal and groom suites for preparation and changing.",
+          "Clear demarcation of event spaces (Sangeet, Pheras, dining) and guest flow.",
+          "Security arrangements and valet parking services for 150 guests.",
+          "Inclusion of basic furniture (tables, chairs) and existing decor elements."
+        ],
+        "negotiation_tips": [
+          "Inquire about off-season rates or weekday discounts if flexible with dates.",
+          "Negotiate complimentary early check-in for bridal party or late check-out for key family members.",
+          "Ask for a waiver on corkage fees if bringing outside beverages (non-alcoholic)."
+        ],
+        "red_flags": [
+          "Vague answers regarding sound curfews or permits.",
+          "Lack of transparent pricing for additional services or hidden charges.",
+          "Poor maintenance of heritage structures or unkempt outdoor spaces during site visit."
+        ],
+        "draft_inquiry_message": "Dear [Venue Name] Team, We are planning Aarav & Meera's Regal Heritage Wedding for approximately 150 guests on November 20, 2026, in Jaipur. We are interested in your heritage property for a hybrid setting with traditional Rajasthani and Marwari customs. Could you please share your wedding packages, availability, and details regarding outdoor sound policies and catering options? We would also like to know about your existing decor elements and power backup facilities. Thank you.",
+        "completed_checks": []
+      },
+      {
+        "id": "v-catering",
+        "category": "Catering & Banquet",
+        "what_to_ask": [
+          "Can you provide a pure vegetarian, authentic Marwari menu with specific Jain options if required?",
+          "What is your server-to-guest ratio for a buffet-style setup?",
+          "Do you offer live food counters for specific Rajasthani delicacies like Dal Baati Churma or Ghevar?",
+          "What are your hygiene standards and food safety certifications?"
+        ],
+        "what_to_confirm": [
+          "Details of the tasting session and menu customization options.",
+          "Inclusion of welcome drinks, appetizers, main course, and dessert sections.",
+          "Provision of all necessary crockery, cutlery, glassware, and buffet setup equipment.",
+          "Clear communication on final headcount deadlines and cancellation policies."
+        ],
+        "negotiation_tips": [
+          "Negotiate complimentary meals for vendors (photographers, musicians, etc.).",
+          "Ask for a discount on child plates or a few extra plates as a buffer.",
+          "Inquire about bundling late-night tea/coffee service into the per-plate cost."
+        ],
+        "red_flags": [
+          "Reluctance to provide a detailed menu or breakdown of costs.",
+          "Poor presentation or taste during the tasting session.",
+          "Unresponsive communication or lack of professionalism during initial interactions."
+        ],
+        "draft_inquiry_message": "Namaste [Caterer Name] Team, We are organizing a pure vegetarian Marwari wedding for 150 guests in Jaipur on November 20, 2026. We are seeking an authentic catering partner who can provide a regal and delicious Marwari feast. Please share your detailed Marwari menu options, pricing per plate, and availability for a tasting session. We are also interested in live counter options and any special dietary accommodations. Thank you.",
+        "completed_checks": []
+      },
+      {
+        "id": "v-photography",
+        "category": "Photography & Videography",
+        "what_to_ask": [
+          "Have you covered heritage weddings in Jaipur before, and can you share relevant portfolios?",
+          "What is your experience with drone photography, specifically for twilight Pheras and large group shots?",
+          "What are the deliverables (number of photos, video length, albums) and the timeline for delivery?",
+          "Do you offer pre-wedding shoots or cinematic highlight reels as part of your package?"
+        ],
+        "what_to_confirm": [
+          "Number of photographers, videographers, and drone operators assigned to the event.",
+          "Backup equipment plan in case of technical issues.",
+          "Clear understanding of key moments to capture (Sangeet performances, Pheras, family portraits).",
+          "Rights to use photos/videos for personal use and privacy clauses."
+        ],
+        "negotiation_tips": [
+          "Negotiate an extended coverage time for Sangeet or Pheras if needed.",
+          "Ask for a complimentary pre-wedding shoot if booking a comprehensive package.",
+          "Inquire about raw footage access or a discount on additional album copies."
+        ],
+        "red_flags": [
+          "Unwillingness to show full wedding galleries (only highlight reels).",
+          "Lack of clear communication about team size or equipment.",
+          "Demanding full payment upfront without a clear contract or deliverables."
+        ],
+        "draft_inquiry_message": "Hello [Studio Name] Team, We are planning our wedding in Jaipur on November 20, 2026, for 150 guests, with a Royal Rajasthani Heritage theme. We are looking for a skilled photography and videography team, including drone expertise for our twilight Pheras and varmala. Could you please share your wedding portfolios, especially those from Jaipur heritage venues, and details of your packages that include 2 candid photographers, 1 videographer, and a drone operator? We look forward to hearing from you.",
+        "completed_checks": []
+      },
+      {
+        "id": "v-decor",
+        "category": "Decor & Ambience",
+        "what_to_ask": [
+          "Can you provide examples of your work with marigold and terracotta themes in heritage settings?",
+          "How do you ensure eco-friendly practices, especially with floral waste and signage materials?",
+          "What are your lighting concepts for the Sangeet and twilight Pheras?",
+          "Do you handle all setup, teardown, and waste management?"
+        ],
+        "what_to_confirm": [
+          "Detailed decor mock-ups or mood boards for each event area.",
+          "Specific types and quantities of marigolds, terracotta pots, and fabric drapes.",
+          "Inclusion of all necessary props, seating arrangements, and stage decor.",
+          "Confirmation of eco-friendly cloth signage designs and placement."
+        ],
+        "negotiation_tips": [
+          "Negotiate a discount for using locally sourced flowers and materials.",
+          "Ask for complimentary basic lighting for certain areas if booking a large package.",
+          "Inquire about reusing certain decor elements across multiple functions to save costs."
+        ],
+        "red_flags": [
+          "Generic portfolio not specific to heritage or Rajasthani themes.",
+          "Lack of clarity on material sourcing or eco-friendly practices.",
+          "Unwillingness to provide detailed sketches or visual representations of the decor plan."
+        ],
+        "draft_inquiry_message": "Dear [Decorator Name] Team, We are planning Aarav & Meera's wedding in Jaipur on November 20, 2026, with a Royal Rajasthani Heritage theme, emphasizing marigold and terracotta accents. We are also committed to eco-friendly practices, including cloth signage. Could you please share your portfolio for similar themes, discuss your approach to sustainable decor, and provide a proposal for decor concepts for our Sangeet and twilight Pheras? Thank you.",
+        "completed_checks": []
+      }
+    ],
+    "creative_ideas": {
+      "decor_concept": "A 'Marigold & Terracotta Oasis' featuring cascading marigold chandeliers, intricate terracotta jharokha backdrops, and traditional 'mandana' floor art. Pathways lined with glowing earthen lamps, block-printed fabric drapes in jewel tones, and brass accents will evoke regal charm. Eco-friendly cloth signage with Rajasthani motifs will guide guests.",
+      "invitation_wording": "With hearts full of joy and the blessings of our elders, Aarav and Meera invite you to witness their union amidst the regal splendor of Jaipur. Join us as we celebrate love, laughter, and a lifetime of togetherness, steeped in the rich traditions of Rajasthan. Your presence is our most cherished gift.",
+      "entertainment": [
+        "Lively Sangeet with a Folk Fusion band (Langa/Manganiyar artists blending traditional melodies with contemporary beats).",
+        "Traditional 'Kathputli' (puppet show) during welcome for an authentic Rajasthani touch.",
+        "High-energy Dhol players and a brass band for the groom's procession (Baraat).",
+        "A professional DJ for an energetic dance floor after the Pheras."
+      ],
+      "games_and_activities": [
+        "Interactive 'Pagdi' (turban) tying station for guests during the Sangeet.",
+        "Traditional Mehendi artists offering intricate designs for female guests.",
+        "A 'Guess the Bollywood Song' game during Sangeet with a Rajasthani twist.",
+        "A 'Heritage Photo Challenge' where guests capture specific architectural details of the venue."
+      ],
+      "return_gifts_favors": [
+        "Hand-painted miniature Jaipur 'gudris' (quilts) or block-printed scarves.",
+        "Small terracotta pots filled with organic Rajasthani spices or 'gulkand' (rose petal jam).",
+        "Lac bangles for female guests, a traditional craft of Jaipur.",
+        "Plantable seed paper cards with a thank you message, encouraging greenery."
+      ],
+      "curated_menu_highlights": [
+        "Live 'Dal Baati Churma' station with various chutneys and accompaniments.",
+        "Authentic 'Gatte ki Sabzi', 'Ker Sangri', and 'Papad ki Sabzi'.",
+        "'Laal Maas' (vegetarian version using paneer or kathal) and 'Paneer Lababdar'.",
+        "A dessert spread featuring 'Ghevar', 'Malpua', and 'Mawa Kachori' with Rabri.",
+        "Welcome drinks: 'Kesar Thandai' and fresh 'Nimbu Pani'."
+      ],
+      "photo_booth_concept": "A 'Royal Jharokha' themed photo booth with a rich velvet backdrop, antique props like ornate cushions, vintage lanterns, and traditional Rajasthani turbans and jewelry for guests to don. Soft, warm lighting will enhance the regal feel.",
+      "signature_moment": "The 'Twilight Pheras' ceremony, held under a canopy adorned with thousands of glowing marigolds and fairy lights, as the setting sun casts a golden hue over the heritage venue. A drone captures the breathtaking aerial view of the sacred fire and the couple's vows, creating a truly cinematic and unforgettable moment."
+    },
+    "version": 1
+  },
+  "plan_1792990243_ban": {
+    "id": "plan_1792990243_ban",
+    "created_at": "2026-10-26T10:20:43.475834",
+    "updated_at": "2026-10-26T10:20:43.475834",
+    "request": {
+      "event_type": "college_fest",
+      "title": "InnovateX & Pulse 2026",
+      "city": "Bangalore",
+      "date": "2026-12-05",
+      "guest_count": 500,
+      "total_budget": 500000.0,
+      "currency": "INR",
+      "theme": "Cyberpunk Neon & Innovation Playground",
+      "food_preference": "mixed",
+      "setting": "indoor",
+      "cultural_preferences": "Pan-Indian energetic student crowd, dynamic battle of bands and hackathon night",
+      "special_requests": "Heavy focus on high-energy sound & lighting, food trucks, digital QR passes, live streaming"
+    },
+    "ai_reasoning": {
+      "theme_and_cultural_framing": "The 'Cyberpunk Neon & Innovation Playground' theme perfectly aligns with Bangalore's identity as India's tech hub and its vibrant, energetic student population. It provides a modern, high-energy backdrop for a Pan-Indian student crowd, fostering an environment of creativity and competition, especially for the hackathon and battle of bands.",
+      "budget_strategy": "With a tight budget of 500,000 INR for 500 guests (1000 INR/guest), the strategy focuses on maximizing impact in key areas: high-energy sound & lighting, diverse food truck options, and robust tech infrastructure for live streaming and competitions. We assume leveraging college facilities for the venue and student volunteers to significantly reduce labor costs. A substantial contingency is vital for unexpected tech or logistical issues.",
+      "seasonality_and_weather": "December in Bangalore offers pleasant, mild weather, ideal for an indoor event with potential outdoor food truck zones or chill-out areas. The indoor setting mitigates any risk of unexpected rain or temperature fluctuations, allowing for consistent control over the cyberpunk lighting and sound elements.",
+      "guest_experience_focus": "The core focus is on an immersive, interactive, and high-octane experience. Guests will be engaged through dynamic music, competitive hackathons, diverse food options, and visually stunning decor. Digital QR passes and live streaming enhance accessibility and modern appeal, catering to a tech-savvy student audience.",
+      "risk_mitigation": "Key risks include power outages (critical for tech-heavy events), internet connectivity issues for live streaming, and crowd management. Mitigation involves securing robust generator backups, redundant internet connections, clear emergency exits, dedicated security teams, and a well-briefed volunteer force for crowd control and first aid."
+    },
+    "budget": {
+      "total_budget": 500000.0,
+      "currency": "INR",
+      "guest_count": 500,
+      "cost_per_guest": 1000.0,
+      "allocated_total": 500000.0,
+      "contingency_percentage": 10.0,
+      "contingency_amount": 50000.0,
+      "categories": [
+        {
+          "category": "Venue & Catering",
+          "percentage": 30.0,
+          "amount": 150000.0,
+          "notes": "Covers food truck vendor payments, basic venue setup (assuming college auditorium/hall), and waste management for food zones.",
+          "per_guest_amount": 300.0
+        },
+        {
+          "category": "Decor & Ambience",
+          "percentage": 15.0,
+          "amount": 75000.0,
+          "notes": "Focus on neon lighting, LED screens, projection mapping, stage backdrops, and interactive tech installations.",
+          "per_guest_amount": 150.0
+        },
+        {
+          "category": "Photography & Videography",
+          "percentage": 10.0,
+          "amount": 50000.0,
+          "notes": "Includes live streaming setup, multi-camera coverage, event photographers, and post-event highlight reel production.",
+          "per_guest_amount": 100.0
+        },
+        {
+          "category": "Entertainment & Music",
+          "percentage": 25.0,
+          "amount": 125000.0,
+          "notes": "High-quality sound system, stage lighting, DJ, Battle of Bands prizes, hackathon tech infrastructure, and competition management.",
+          "per_guest_amount": 250.0
+        },
+        {
+          "category": "Attire & Styling",
+          "percentage": 1.0,
+          "amount": 5000.0,
+          "notes": "Minimal allocation for volunteer/organizer T-shirts and basic branding elements.",
+          "per_guest_amount": 10.0
+        },
+        {
+          "category": "Invitations & Favors",
+          "percentage": 3.0,
+          "amount": 15000.0,
+          "notes": "Digital QR passes, online promotion, and small, tech-themed prizes/merchandise for competition winners.",
+          "per_guest_amount": 30.0
+        },
+        {
+          "category": "Logistics & Transport",
+          "percentage": 6.0,
+          "amount": 30000.0,
+          "notes": "Power distribution, security personnel, first aid station, equipment transport within campus, and cleaning services.",
+          "per_guest_amount": 60.0
+        },
+        {
+          "category": "Contingency Buffer",
+          "percentage": 10.0,
+          "amount": 50000.0,
+          "notes": "Essential reserve for unexpected tech glitches, vendor overruns, last-minute equipment rentals, or emergency supplies.",
+          "per_guest_amount": 100.0
+        }
+      ],
+      "cost_saving_ideas": [
+        {
+          "id": "saving-1",
+          "title": "Leverage Student Talent for Decor & Tech",
+          "description": "Engage design, engineering, and arts students from the college to conceptualize and execute decor elements, light programming, and even basic AV setup. This reduces professional vendor costs and fosters student participation.",
+          "target_category": "Decor & Ambience",
+          "estimated_savings_percentage": 30.0,
+          "estimated_savings_amount": 22500.0,
+          "tradeoff": "Requires strong project management and supervision from faculty/organizers to ensure quality and timely execution."
+        },
+        {
+          "id": "saving-2",
+          "title": "Food Truck Revenue Share Model",
+          "description": "Instead of paying a fixed fee per truck, negotiate a revenue-sharing model or a lower base fee with food truck vendors. This incentivizes them to sell more and reduces upfront catering costs for the fest organizers.",
+          "target_category": "Venue & Catering",
+          "estimated_savings_percentage": 20.0,
+          "estimated_savings_amount": 30000.0,
+          "tradeoff": "Organizers have less control over food pricing and variety, as vendors will prioritize popular, profitable items. Requires careful contract negotiation."
+        },
+        {
+          "id": "saving-3",
+          "title": "Digital-First Promotion & QR Passes",
+          "description": "Utilize social media, college WhatsApp groups, email campaigns, and a dedicated event website for all promotions. Implement a completely digital QR code entry system to eliminate printing costs for invitations and tickets.",
+          "target_category": "Invitations & Favors",
+          "estimated_savings_percentage": 35.0,
+          "estimated_savings_amount": 5250.0,
+          "tradeoff": "Requires robust internet connectivity and a reliable digital platform for ticket generation and scanning. May exclude guests less comfortable with technology."
+        },
+        {
+          "id": "saving-4",
+          "title": "Sponsor Integration for Key Elements",
+          "description": "Actively seek sponsorships from local tech companies, F&B brands, or student-focused services. Offer prominent branding on stage, digital screens, or specific event zones (e.g., 'XYZ Gaming Zone') in exchange for funding or in-kind contributions (e.g., free energy drinks).",
+          "target_category": "Entertainment & Music",
+          "estimated_savings_percentage": 25.0,
+          "estimated_savings_amount": 31250.0,
+          "tradeoff": "Requires significant time and effort for outreach, proposal writing, and sponsor management. May involve compromises on creative control to accommodate sponsor branding."
+        }
+      ]
+    },
+    "timeline": {
+      "is_rush_plan": false,
+      "days_until_event": 40,
+      "tasks": [
+        {
+          "id": "task-1",
+          "title": "Core Committee & Budget Finalization",
+          "description": "Form event committees (Tech, Decor, PR, Logistics, F&B), assign roles, and finalize the detailed budget allocation.",
+          "days_before_event": 40,
+          "deadline_date": "2026-10-26",
+          "phase": "Planning & Strategy",
+          "priority": "High",
+          "owner_suggestion": "Faculty Advisor & Lead Organizers",
+          "status": "Not started"
+        },
+        {
+          "id": "task-2",
+          "title": "Venue Confirmation & Initial AV Quotes",
+          "description": "Secure college auditorium/grounds. Obtain initial quotes for high-energy sound, lighting, and live streaming vendors.",
+          "days_before_event": 40,
+          "deadline_date": "2026-10-26",
+          "phase": "Infrastructure & Tech",
+          "priority": "High",
+          "owner_suggestion": "Logistics & Tech Committee",
+          "status": "Not started"
+        },
+        {
+          "id": "task-3",
+          "title": "Food Truck Vendor Outreach & Selection",
+          "description": "Contact diverse food truck vendors in Bangalore, negotiate terms (revenue share/fixed fee), and finalize menu options.",
+          "days_before_event": 40,
+          "deadline_date": "2026-10-26",
+          "phase": "Food & Beverage",
+          "priority": "Medium",
+          "owner_suggestion": "F&B Committee",
+          "status": "Not started"
+        },
+        {
+          "id": "task-4",
+          "title": "Digital Marketing Campaign Launch & QR System Setup",
+          "description": "Launch social media campaign, create event website, and implement the digital QR pass generation and scanning system.",
+          "days_before_event": 40,
+          "deadline_date": "2026-10-26",
+          "phase": "Guest Relations & PR",
+          "priority": "High",
+          "owner_suggestion": "PR & Tech Committee",
+          "status": "Not started"
+        },
+        {
+          "id": "task-5",
+          "title": "Sound & Lighting Vendor Finalization & Stage Design",
+          "description": "Confirm AV vendor, finalize equipment list (lasers, haze machines, LED walls), and approve cyberpunk-themed stage design.",
+          "days_before_event": 30,
+          "deadline_date": "2026-11-05",
+          "phase": "Production & Decor",
+          "priority": "High",
+          "owner_suggestion": "Decor & Tech Committee",
+          "status": "Not started"
+        },
+        {
+          "id": "task-6",
+          "title": "Volunteer Training & Security Briefing",
+          "description": "Conduct comprehensive training for all student volunteers (ushering, tech support, first aid) and brief security personnel.",
+          "days_before_event": 14,
+          "deadline_date": "2026-11-21",
+          "phase": "Operations & Safety",
+          "priority": "High",
+          "owner_suggestion": "Logistics & Safety Committee",
+          "status": "Not started"
+        },
+        {
+          "id": "task-7",
+          "title": "Final Tech Checks (Internet, Power, AV)",
+          "description": "Perform full system checks for internet redundancy, power supply, generator backup, live streaming, and all AV equipment.",
+          "days_before_event": 7,
+          "deadline_date": "2026-11-28",
+          "phase": "Technical Readiness",
+          "priority": "High",
+          "owner_suggestion": "Tech Committee",
+          "status": "Not started"
+        },
+        {
+          "id": "task-8",
+          "title": "Full Dress Rehearsal & Food Truck Setup",
+          "description": "Conduct a complete run-through of the main events (Battle of Bands, DJ set) with sound and lights. Oversee food truck arrival and setup.",
+          "days_before_event": 1,
+          "deadline_date": "2026-12-04",
+          "phase": "Pre-Event Execution",
+          "priority": "High",
+          "owner_suggestion": "All Committee Leads",
+          "status": "Not started"
+        }
+      ],
+      "completion_percentage": 0.0
+    },
+    "vendor_checklists": [
+      {
+        "id": "v-soundlighting",
+        "category": "Sound & Lighting Vendor",
+        "what_to_ask": [
+          "What is your experience with high-energy college fests and battle of bands setups?",
+          "Can you provide a detailed equipment list (speakers, subwoofers, stage monitors, moving heads, lasers, haze machines, LED walls)?",
+          "Do you have backup equipment and a dedicated on-site sound engineer and lighting technician for the entire event duration?",
+          "What are the power requirements for your setup, and do you provide power distribution boards and cables?"
+        ],
+        "what_to_confirm": [
+          "Delivery, setup, and teardown schedule, ensuring minimal disruption to college activities.",
+          "Sound mapping and lighting cues for each performance/segment (Battle of Bands, DJ set, hackathon presentations).",
+          "Availability of a dedicated technical contact person for immediate issue resolution.",
+          "Inclusion of all necessary permits and licenses for sound levels and laser projections."
+        ],
+        "negotiation_tips": [
+          "Request a college/student discount or a package deal for sound, lighting, and LED screens.",
+          "Negotiate for complimentary extra equipment like a projector for the hackathon or additional mic stands.",
+          "Ask if any existing college AV equipment can be integrated to reduce costs."
+        ],
+        "red_flags": [
+          "Vague equipment lists or refusal to provide specific technical specifications.",
+          "No mention of backup equipment or on-site technicians.",
+          "Unwillingness to provide references from similar high-energy events.",
+          "Hidden charges for transport, setup, or overtime."
+        ],
+        "draft_inquiry_message": "Subject: Inquiry for Sound & Lighting Services - InnovateX & Pulse 2026 College Fest. Dear [Vendor Name], We are organizing 'InnovateX & Pulse 2026', a college fest with a Cyberpunk Neon theme, on Dec 5, 2026, for 500 guests in Bangalore. We require high-energy sound and lighting for a Battle of Bands, DJ night, and hackathon. Please share your portfolio, equipment list, and package options for such events. We look forward to your proposal.",
+        "completed_checks": []
+      },
+      {
+        "id": "v-foodtrucks",
+        "category": "Food Truck Coordinator/Vendors",
+        "what_to_ask": [
+          "What variety of cuisines can your food trucks offer (e.g., South Indian, North Indian, Chinese, Continental)?",
+          "What is your capacity to serve 500 guests efficiently, and what is your average serving time per customer?",
+          "Do your trucks have valid FSSAI licenses and adhere to strict hygiene standards?",
+          "What are your power requirements, and do you provide your own generators or require power outlets?"
+        ],
+        "what_to_confirm": [
+          "Detailed menu and pricing for each food truck, ensuring student-friendly options.",
+          "Preferred payment model (fixed fee per truck, revenue share, or hybrid).",
+          "Proof of necessary permits for operating within Bangalore city limits and on college premises.",
+          "Waste management plan for food waste and disposable cutlery."
+        ],
+        "negotiation_tips": [
+          "Negotiate a lower base fee or a favorable revenue-sharing percentage due to the high footfall.",
+          "Ask for complimentary water stations or a special 'fest combo' meal deal for students.",
+          "Bundle multiple food trucks from the same vendor/coordinator for a better overall rate."
+        ],
+        "red_flags": [
+          "Lack of proper FSSAI certification or visible hygiene issues during inspection.",
+          "Unwillingness to provide a diverse menu or cater to specific dietary preferences (mixed crowd).",
+          "No clear plan for power supply or waste disposal.",
+          "Exorbitant pricing that doesn't align with a college student budget."
+        ],
+        "draft_inquiry_message": "Subject: Food Truck Partnership Inquiry - InnovateX & Pulse 2026 College Fest. Dear [Vendor Name], We are planning 'InnovateX & Pulse 2026', a college fest for 500 students on Dec 5, 2026, in Bangalore. We are looking for diverse and high-quality food truck options. Please share your menu, pricing, and preferred partnership models (fixed fee/revenue share). We aim to provide a great culinary experience for our energetic student crowd.",
+        "completed_checks": []
+      },
+      {
+        "id": "v-livestreaming",
+        "category": "Live Streaming & AV Partner",
+        "what_to_ask": [
+          "What live streaming platform do you use, and can it handle 500+ concurrent viewers reliably?",
+          "Can you provide a multi-camera setup for dynamic coverage of the stage, hackathon area, and crowd?",
+          "What are your internet bandwidth requirements, and do you have a redundant internet connection plan?",
+          "Do you offer post-event video editing for a highlight reel and full recording delivery?"
+        ],
+        "what_to_confirm": [
+          "Dedicated on-site technical support for the entire event duration.",
+          "Testing of internet connectivity and streaming quality prior to the event.",
+          "Inclusion of graphics overlays (event logo, sponsor logos, speaker names) in the live stream.",
+          "Clear agreement on recording ownership and delivery format/timeline."
+        ],
+        "negotiation_tips": [
+          "Negotiate a basic package that includes essential streaming and recording, avoiding unnecessary frills.",
+          "Ask if college internet infrastructure can be leveraged to reduce costs.",
+          "Request a student discount or a package deal if bundling with other AV needs."
+        ],
+        "red_flags": [
+          "No clear plan for internet redundancy or backup power for streaming equipment.",
+          "Only offering a single camera setup for a dynamic event.",
+          "Unwillingness to provide a test stream or demonstrate platform capabilities.",
+          "Lack of experience with live streaming multi-faceted events like college fests."
+        ],
+        "draft_inquiry_message": "Subject: Live Streaming & AV Services for InnovateX & Pulse 2026. Dear [Vendor Name], Our college is hosting 'InnovateX & Pulse 2026' on Dec 5, 2026, in Bangalore, for 500 guests. We require professional live streaming services for our Battle of Bands, hackathon, and key presentations. Please provide details on your multi-camera setup, platform capabilities, internet redundancy plans, and package options for college events. We also need post-event recording.",
+        "completed_checks": []
+      },
+      {
+        "id": "v-security",
+        "category": "Security & Logistics",
+        "what_to_ask": [
+          "What is your experience in managing crowds of 500+ at college events?",
+          "Can you provide a detailed security plan including entry/exit points, stage security, and emergency response protocols?",
+          "Do your personnel have first aid training, and can you set up a dedicated first aid station?",
+          "What is your waste management strategy for a high-traffic event with food trucks?"
+        ],
+        "what_to_confirm": [
+          "Number of security personnel, their deployment locations, and shift timings.",
+          "Clear communication channels between security, event organizers, and emergency services.",
+          "Availability of fire safety equipment and clear evacuation routes.",
+          "Provision of adequate dustbins and a schedule for waste collection throughout the event."
+        ],
+        "negotiation_tips": [
+          "Integrate student volunteers for basic ushering and information desks to reduce professional security headcount.",
+          "Negotiate a package deal for security, first aid, and waste management services.",
+          "Ask for a reduced rate if the event is during off-peak hours for their services."
+        ],
+        "red_flags": [
+          "Unlicensed or inadequately trained security personnel.",
+          "No clear emergency action plan or communication protocol.",
+          "Lack of experience with large student gatherings or high-energy events.",
+          "Refusal to conduct a pre-event site visit and risk assessment."
+        ],
+        "draft_inquiry_message": "Subject: Security & Logistics Services for InnovateX & Pulse 2026. Dear [Vendor Name], We are organizing 'InnovateX & Pulse 2026', a college fest for 500 guests on Dec 5, 2026, in Bangalore. We require professional security, crowd management, and logistics support, including first aid and waste management. Please share your experience with similar events and provide a detailed proposal for our requirements.",
+        "completed_checks": []
+      }
+    ],
+    "creative_ideas": {
+      "decor_concept": "Cyberpunk Neon Grid: A dynamic interplay of neon LED strips, laser projections, and UV reactive art installations. Stage backdrops feature glitch art and circuit board motifs, with interactive LED panels responding to music. Dark, industrial textures contrasted with vibrant, glowing accents.",
+      "invitation_wording": "SYSTEM INITIATED: InnovateX & Pulse 2026. Prepare for a digital uprising. Join us as we hack the future and feel the pulse of innovation. Your QR pass is your key to the Cyberpunk Neon Playground. Dec 5, 2026, Bangalore. Scan. Enter. Experience.",
+      "entertainment": [
+        "High-octane 'Battle of Bands' with professional judges and a state-of-the-art sound and lighting setup.",
+        "Energetic DJ Night featuring popular student DJs and guest artists, with synchronized laser and smoke shows.",
+        "24-hour 'Code-a-Thon' (Hackathon) with live leaderboards, mentor zones, and a dedicated 'sleep pod' area.",
+        "Interactive Tech Talks and workshops by industry leaders and successful alumni."
+      ],
+      "games_and_activities": [
+        "VR Gaming Zone featuring the latest virtual reality experiences and competitive esports.",
+        "Robotics Showcase & 'Mini-Bot Wars' where student-built robots compete in an arena.",
+        "Retro Arcade Corner with classic video games (Pac-Man, Street Fighter) on vintage machines.",
+        "Interactive AI Art Generation Booth where guests can create digital art based on prompts."
+      ],
+      "return_gifts_favors": [
+        "Branded USB drives pre-loaded with event highlights and college digital assets.",
+        "Customized tech-themed stickers/decals (e.g., 'I survived the Hackathon').",
+        "Miniature fidget spinners or stress balls with the fest logo.",
+        "Digital certificates of participation for all hackathon and competition entrants."
+      ],
+      "curated_menu_highlights": [
+        "Diverse food truck alley featuring popular Bangalore street food (Dosa, Idli, Rolls, Chaat) alongside Chinese and Continental options (Noodles, Manchurian, Burgers, Fries).",
+        "Dedicated 'Energy Boost' station with mocktails, fresh juices, and energy drinks.",
+        "Late-night coffee and tea counter for hackathon participants.",
+        "Dessert bar with fusion sweets and ice cream rolls."
+      ],
+      "photo_booth_concept": "Glitch & Glow Photo Booth: A dynamic setup with neon light tubes, reflective surfaces, and a green screen for digital cyberpunk backgrounds and animated overlays. Guests can instantly share photos with custom hashtags.",
+      "signature_moment": "The 'Innovation Pulse' Finale: A synchronized laser light show and confetti blast during the Battle of Bands winning announcement, followed by a collective 'Innovation Pledge' read by all students, symbolizing their commitment to future tech endeavors."
+    },
+    "version": 1
+  },
+  "plan_1792991341_ban": {
+    "id": "plan_1792991341_ban",
+    "created_at": "2026-10-26T10:39:01.282903",
+    "updated_at": "2026-10-26T10:39:01.282903",
+    "request": {
+      "event_type": "anniversary",
+      "title": "InnovateX & Pulse 2026",
+      "city": "Bangalore",
+      "date": "2026-12-05",
+      "guest_count": 500,
+      "total_budget": 500000.0,
+      "currency": "INR",
+      "theme": "Cyberpunk Neon & Innovation Playground",
+      "food_preference": "mixed",
+      "setting": "indoor",
+      "cultural_preferences": "Pan-Indian energetic student crowd, dynamic battle of bands and hackathon night",
+      "special_requests": "Heavy focus on high-energy sound & lighting, food trucks, digital QR passes, live streaming"
+    },
+    "ai_reasoning": {
+      "theme_and_cultural_framing": "The 'Cyberpunk Neon & Innovation Playground' theme perfectly aligns with Bangalore's identity as India's tech hub and the energetic, forward-thinking spirit of a student crowd. We're integrating the requested 'battle of bands' and 'hackathon night' as core pillars, using neon lighting and digital projections to create an immersive, high-tech atmosphere that celebrates innovation and creativity, appealing to a diverse Pan-Indian student demographic.",
+      "budget_strategy": "With a budget of 5 Lakh INR for 500 guests (1000 INR/guest), the strategy is to maximize impact through experience rather than lavish spending. We're prioritizing high-energy sound and lighting, and the unique food truck experience. Cost savings will come from leveraging digital invitations, DIY-style decor elements, and potentially utilizing college campus facilities or budget-friendly industrial-style venues in Bangalore. A significant portion is allocated to AV and catering to meet the core requests.",
+      "seasonality_and_weather": "December in Bangalore offers pleasant, mild weather, making it ideal for an indoor event where climate control is less of a concern. The indoor setting ensures the 'Cyberpunk Neon' lighting effects are maximized without external light interference, and provides a controlled environment for the hackathon and battle of bands, shielding from any unexpected evening chill or light showers.",
+      "guest_experience_focus": "The focus is on an interactive, high-octane experience. Guests will be immersed in a digital-first environment from QR passes to live streaming. The 'Innovation Playground' aspect will be brought to life with the hackathon, while the 'Battle of Bands' provides the requested high-energy entertainment. Food trucks offer diverse, casual dining, fostering a vibrant, festival-like atmosphere popular with students.",
+      "risk_mitigation": "For a tech-heavy event, primary risks include AV failures, power outages, and crowd management. We'll ensure redundant sound and lighting systems, a dedicated power backup, and a robust technical support team. Clear signage, volunteer marshals, and well-defined zones for the hackathon and performance stages will manage crowd flow and safety. Digital QR passes will streamline entry and track attendance."
+    },
+    "budget": {
+      "total_budget": 500000.0,
+      "currency": "INR",
+      "guest_count": 500,
+      "cost_per_guest": 1000.0,
+      "allocated_total": 500000.0,
+      "contingency_percentage": 8.0,
+      "contingency_amount": 40000.0,
+      "categories": [
+        {
+          "category": "Venue & Catering",
+          "percentage": 35.0,
+          "amount": 175000.0,
+          "notes": "Covers rental of a suitable indoor space (e.g., large convention hall, college auditorium, or industrial-style event space) and a selection of 3-4 diverse food trucks.",
+          "per_guest_amount": 350.0
+        },
+        {
+          "category": "Decor & Ambience",
+          "percentage": 18.0,
+          "amount": 90000.0,
+          "notes": "Heavy emphasis on neon lighting, LED strips, digital projections, glow-in-the-dark elements, and minimal, impactful props to create the cyberpunk vibe.",
+          "per_guest_amount": 180.0
+        },
+        {
+          "category": "Photography & Videography",
+          "percentage": 10.0,
+          "amount": 50000.0,
+          "notes": "Includes 2 photographers, 1 videographer, and live streaming setup for the event, capturing the dynamic energy and hackathon moments.",
+          "per_guest_amount": 100.0
+        },
+        {
+          "category": "Entertainment & Music",
+          "percentage": 15.0,
+          "amount": 75000.0,
+          "notes": "Covers sound system rental for battle of bands, DJ services, stage setup, and prize money/stipends for hackathon winners and band participants.",
+          "per_guest_amount": 150.0
+        },
+        {
+          "category": "Attire & Styling",
+          "percentage": 2.0,
+          "amount": 10000.0,
+          "notes": "Minimal allocation, primarily for event staff/volunteer T-shirts or accessories that fit the theme.",
+          "per_guest_amount": 20.0
+        },
+        {
+          "category": "Invitations & Favors",
+          "percentage": 5.0,
+          "amount": 25000.0,
+          "notes": "Digital QR passes for entry, and small, tech-themed favors for hackathon participants/winners.",
+          "per_guest_amount": 50.0
+        },
+        {
+          "category": "Logistics & Transport",
+          "percentage": 7.0,
+          "amount": 35000.0,
+          "notes": "Includes transport for sound/lighting equipment, food trucks, and basic staff transport. No guest transport planned due to budget.",
+          "per_guest_amount": 70.0
+        },
+        {
+          "category": "Contingency Buffer",
+          "percentage": 8.0,
+          "amount": 40000.0,
+          "notes": "Essential reserve for unexpected technical needs, additional power, or last-minute vendor requirements given the tight budget.",
+          "per_guest_amount": 80.0
+        }
+      ],
+      "cost_saving_ideas": [
+        {
+          "id": "saving-1",
+          "title": "Leverage College Resources for Venue & Volunteers",
+          "description": "Utilize a large college auditorium, sports hall, or common area as the primary venue, saving significant rental costs. Recruit student volunteers for event management, registration, and technical support.",
+          "target_category": "Venue & Catering",
+          "estimated_savings_percentage": 25.0,
+          "estimated_savings_amount": 43750.0,
+          "tradeoff": "May require more internal coordination with college administration and training for student volunteers."
+        },
+        {
+          "id": "saving-2",
+          "title": "DIY & Digital Decor Projections",
+          "description": "Instead of expensive physical decor, focus on high-impact digital projections (mapping software) on walls and surfaces, combined with rented neon signs and LED strip lights. Students can contribute to digital art.",
+          "target_category": "Decor & Ambience",
+          "estimated_savings_percentage": 30.0,
+          "estimated_savings_amount": 27000.0,
+          "tradeoff": "Requires strong technical expertise for projection mapping and potentially less tactile decor elements."
+        },
+        {
+          "id": "saving-3",
+          "title": "Partnership with Local Food Truck Hubs",
+          "description": "Instead of individual negotiations, partner with a local food truck aggregator or a popular food truck park in Bangalore. They can offer a package deal for multiple trucks, reducing individual setup fees.",
+          "target_category": "Venue & Catering",
+          "estimated_savings_percentage": 15.0,
+          "estimated_savings_amount": 26250.0,
+          "tradeoff": "Limited negotiation on individual truck menus, but ensures variety and streamlined logistics."
+        },
+        {
+          "id": "saving-4",
+          "title": "Open Source & Student-Developed Hackathon Platforms",
+          "description": "Utilize free or open-source platforms for hackathon registration, submission, and judging, and encourage student developers to create custom event apps or digital signage, reducing software costs.",
+          "target_category": "Entertainment & Music",
+          "estimated_savings_percentage": 20.0,
+          "estimated_savings_amount": 15000.0,
+          "tradeoff": "Requires internal technical oversight and potentially longer development time if custom solutions are built."
+        }
+      ]
+    },
+    "timeline": {
+      "is_rush_plan": false,
+      "days_until_event": 40,
+      "tasks": [
+        {
+          "id": "task-1",
+          "title": "Secure Venue & Initial Permits",
+          "description": "Confirm availability of college hall or external venue, and initiate necessary permissions for large gathering, sound, and food trucks in Bangalore.",
+          "days_before_event": 40,
+          "deadline_date": "2026-10-26",
+          "phase": "Planning & Legal",
+          "priority": "High",
+          "owner_suggestion": "Event Lead & College Administration",
+          "status": "Not started"
+        },
+        {
+          "id": "task-2",
+          "title": "Lock Down Key AV & Lighting Vendor",
+          "description": "Book high-energy sound system, stage lighting, LED screens, and projection equipment. Confirm power backup and technical support.",
+          "days_before_event": 40,
+          "deadline_date": "2026-10-26",
+          "phase": "Production",
+          "priority": "High",
+          "owner_suggestion": "AV Coordinator",
+          "status": "Not started"
+        },
+        {
+          "id": "task-3",
+          "title": "Food Truck Selection & Contract",
+          "description": "Finalize 3-4 diverse food trucks (mixed cuisine) and sign contracts, confirming power requirements and waste management plans.",
+          "days_before_event": 40,
+          "deadline_date": "2026-10-26",
+          "phase": "Food & Beverage",
+          "priority": "High",
+          "owner_suggestion": "Catering Lead",
+          "status": "Not started"
+        },
+        {
+          "id": "task-4",
+          "title": "Launch Hackathon & Battle of Bands Registration",
+          "description": "Open online registration for participants, outlining rules, prize structure, and submission guidelines.",
+          "days_before_event": 40,
+          "deadline_date": "2026-10-26",
+          "phase": "Engagement",
+          "priority": "Medium",
+          "owner_suggestion": "Student Committee & Marketing",
+          "status": "Not started"
+        },
+        {
+          "id": "task-5",
+          "title": "Develop Digital QR Pass System",
+          "description": "Design and test the digital QR pass system for guest entry and live streaming access. Integrate with RSVP list.",
+          "days_before_event": 40,
+          "deadline_date": "2026-10-26",
+          "phase": "Guest Relations & Tech",
+          "priority": "High",
+          "owner_suggestion": "Tech Team",
+          "status": "Not started"
+        },
+        {
+          "id": "task-6",
+          "title": "Decor & Projection Content Finalization",
+          "description": "Finalize neon sign designs, LED strip placements, and prepare digital content for projection mapping and screens.",
+          "days_before_event": 30,
+          "deadline_date": "2026-11-05",
+          "phase": "Production & Decor",
+          "priority": "Medium",
+          "owner_suggestion": "Decor Lead & Design Team",
+          "status": "Not started"
+        },
+        {
+          "id": "task-7",
+          "title": "Final Walkthrough with All Vendors",
+          "description": "On-site meeting with AV, food trucks, venue staff, and security to confirm layout, power, and logistical flow.",
+          "days_before_event": 7,
+          "deadline_date": "2026-11-28",
+          "phase": "Operations",
+          "priority": "High",
+          "owner_suggestion": "Event Lead",
+          "status": "Not started"
+        },
+        {
+          "id": "task-8",
+          "title": "Full Technical Rehearsal & Live Stream Test",
+          "description": "Test all sound, lighting, projections, internet connectivity, and live streaming setup. Conduct a run-through of the battle of bands and hackathon presentations.",
+          "days_before_event": 1,
+          "deadline_date": "2026-12-04",
+          "phase": "Rehearsal",
+          "priority": "High",
+          "owner_suggestion": "AV Coordinator & Tech Team",
+          "status": "Not started"
+        }
+      ],
+      "completion_percentage": 0.0
+    },
+    "vendor_checklists": [
+      {
+        "id": "v-venue",
+        "category": "Venue & Event Space",
+        "what_to_ask": [
+          "What are the power capacities and availability of multiple power outlets for AV and food trucks?",
+          "Is there adequate internet connectivity for live streaming and hackathon participants?",
+          "What are the access times for setup and teardown, and are there any noise restrictions?",
+          "Are there designated areas for food truck parking with easy access for guests?"
+        ],
+        "what_to_confirm": [
+          "Clear floor plan with designated zones for stage, hackathon, food trucks, and chill-out areas.",
+          "Emergency exits, fire safety protocols, and first-aid station availability.",
+          "Security personnel allocation and crowd management plan.",
+          "Waste management and recycling facilities, especially for food truck waste."
+        ],
+        "negotiation_tips": [
+          "Inquire about off-peak rates or package deals if combining with college facilities.",
+          "Negotiate extended setup/teardown hours without additional charges.",
+          "Ask for complimentary use of existing tables, chairs, or basic lighting if available."
+        ],
+        "red_flags": [
+          "Lack of transparency on hidden charges (e.g., electricity, cleaning).",
+          "Unwillingness to provide detailed power diagrams or internet speed guarantees.",
+          "Poor communication or slow response times from venue management."
+        ],
+        "draft_inquiry_message": "Hello! We are planning 'InnovateX & Pulse 2026', an anniversary event for 500 guests on Dec 5, 2026, in Bangalore. We're looking for an indoor venue suitable for a 'Cyberpunk Neon' theme with a battle of bands and hackathon. Please share your availability, rental rates, power specifications, and internet capabilities. We also require space for 3-4 food trucks.",
+        "completed_checks": []
+      },
+      {
+        "id": "v-av",
+        "category": "Audio Visual & Lighting",
+        "what_to_ask": [
+          "Can you provide a high-energy sound system suitable for a live battle of bands and DJ?",
+          "What kind of neon lighting, LED strips, and projection mapping equipment do you offer?",
+          "Do you provide dedicated technical support throughout the event, including for live streaming?",
+          "What are your power requirements, and do you offer generator backup options?"
+        ],
+        "what_to_confirm": [
+          "Detailed equipment list including wattage, number of speakers, projectors, and lighting fixtures.",
+          "Proof of insurance and safety certifications for all equipment and rigging.",
+          "Live streaming setup details (cameras, encoders, internet bandwidth requirements).",
+          "Pre-event testing schedule and on-site rehearsal plan."
+        ],
+        "negotiation_tips": [
+          "Bundle sound, lighting, and live streaming into a single package for a better rate.",
+          "Negotiate for complimentary extra hours for setup/teardown if needed.",
+          "Ask for a discount if providing your own digital content for projections."
+        ],
+        "red_flags": [
+          "Vague answers about equipment specifications or technical support availability.",
+          "No clear plan for power backup or redundancy for critical systems.",
+          "Unprofessional portfolio or lack of experience with high-energy student events."
+        ],
+        "draft_inquiry_message": "Greetings! For 'InnovateX & Pulse 2026' on Dec 5, 2026, in Bangalore (500 guests), we need high-energy AV, neon lighting, and live streaming. Can you provide a quote for a sound system for a battle of bands, LED/neon decor, projection mapping, and full technical support? Please share your portfolio and equipment list.",
+        "completed_checks": []
+      },
+      {
+        "id": "v-catering-ft",
+        "category": "Food Trucks",
+        "what_to_ask": [
+          "What are your per-plate pricing models or package deals for 500 guests?",
+          "Can you offer a diverse menu covering Pan-Indian preferences (e.g., South Indian, North Indian, fast food, desserts)?",
+          "What are your power requirements, and do you have silent generators?",
+          "What is your capacity to serve 500 guests efficiently without long queues?"
+        ],
+        "what_to_confirm": [
+          "Food safety licenses and hygiene certifications for all trucks.",
+          "Menu options, portion sizes, and allergen information.",
+          "Setup and service timelines, including waste disposal plan.",
+          "Staffing levels to ensure quick service."
+        ],
+        "negotiation_tips": [
+          "Negotiate a fixed per-plate cost across all selected trucks for simplicity.",
+          "Ask for complimentary water stations or a basic beverage package.",
+          "Inquire about discounts for booking multiple trucks from the same vendor/aggregator."
+        ],
+        "red_flags": [
+          "Unclear pricing or unwillingness to provide a detailed menu.",
+          "Lack of proper food safety documentation or poor reviews on hygiene.",
+          "Inability to handle large crowds or provide efficient service."
+        ],
+        "draft_inquiry_message": "Hi team! We're organizing 'InnovateX & Pulse 2026' for 500 guests on Dec 5, 2026, in Bangalore. We're looking for 3-4 diverse food trucks (mixed cuisine, including veg/non-veg options). Please share your menu, per-plate pricing, power requirements, and capacity to serve a large student crowd. We're keen on a vibrant, efficient setup!",
+        "completed_checks": []
+      },
+      {
+        "id": "v-photo-video",
+        "category": "Photography & Videography",
+        "what_to_ask": [
+          "Do you have experience capturing high-energy events with dynamic lighting like concerts or tech festivals?",
+          "What is your approach to covering both the battle of bands and the hackathon simultaneously?",
+          "What are your deliverables (number of photos, video length, raw footage options)?",
+          "Can you provide a quick turnaround for highlight reels for social media post-event?"
+        ],
+        "what_to_confirm": [
+          "Portfolio showcasing similar event styles and lighting conditions.",
+          "Number of photographers/videographers and their roles.",
+          "Usage rights for photos/videos for college promotions.",
+          "Backup equipment and data storage protocols."
+        ],
+        "negotiation_tips": [
+          "Negotiate a package deal for both photography and videography, including live streaming support.",
+          "Ask for a discount if the college can provide student assistants for basic tasks.",
+          "Inquire about a social media highlight reel as a complimentary add-on."
+        ],
+        "red_flags": [
+          "Lack of portfolio examples for dynamic, low-light events.",
+          "Unclear pricing structure or hidden charges for editing/delivery.",
+          "No backup plan for equipment failure or data loss."
+        ],
+        "draft_inquiry_message": "Hello! We need a dynamic photography and videography team for 'InnovateX & Pulse 2026' on Dec 5, 2026, in Bangalore (500 guests). We require coverage for a 'Cyberpunk Neon' themed event, including a battle of bands, hackathon, and live streaming. Please share your portfolio, packages, and experience with high-energy tech events.",
+        "completed_checks": []
+      }
+    ],
+    "creative_ideas": {
+      "decor_concept": "Cyberpunk Alley: A fusion of industrial aesthetics with vibrant neon glow. Think blacklight reactive paint, LED strip lighting outlining architectural features, digital projections displaying glitch art and code, metallic accents, and graffiti-style art on temporary panels. Glow-in-the-dark signage for different zones (Hackathon Hub, Band Stage, Food Truck Zone).",
+      "invitation_wording": "INITIATING PROTOCOL: INNOVATEX & PULSE 2026. Prepare for a night where circuits meet rhythm and ideas ignite. Join us on Dec 5, 2026, in Bangalore, as we power up for an anniversary like no other. Your digital QR pass awaits. Access Granted: Future is Now.",
+      "entertainment": [
+        "High-energy Battle of Bands featuring local college talent and guest judges.",
+        "Live DJ spinning electronic, techno, and Bollywood fusion tracks between band sets.",
+        "Interactive VJ (Video Jockey) creating live visual effects synchronized with music.",
+        "Augmented Reality (AR) filters and games accessible via QR codes for guest interaction."
+      ],
+      "games_and_activities": [
+        "24-hour Hackathon Challenge (pre-registered teams) with a live presentation and judging on stage.",
+        "Retro Arcade Gaming Zone with classic arcade machines and console setups.",
+        "VR/AR Experience Booths showcasing student projects or popular games.",
+        "Interactive 'Code Wall' where guests can contribute to a collaborative digital art piece."
+      ],
+      "return_gifts_favors": [
+        "Customized USB drives pre-loaded with event highlights and college anthems.",
+        "Glow-in-the-dark wristbands or LED keychains with event branding.",
+        "Miniature 'innovation kits' with small tech gadgets or DIY circuit boards (for hackathon winners).",
+        "Digital art prints or NFTs (Non-Fungible Tokens) as unique keepsakes."
+      ],
+      "curated_menu_highlights": [
+        "Diverse food trucks offering Pan-Indian street food (e.g., Kathi Rolls, Momos, Dosa varieties, Chaat).",
+        "Global street food options (e.g., Tacos, Burgers, Pasta bowls).",
+        "Dessert truck with fusion sweets and 'neon' themed beverages.",
+        "Energy drink and coffee bar to fuel hackathon participants."
+      ],
+      "photo_booth_concept": "Glitch Matrix Photo Booth: A setup with a green screen for dynamic digital backgrounds (cyberpunk cityscapes, code rain), neon light tubes, and props like LED glasses, futuristic masks, and circuit board accessories. Guests can instantly share photos with custom AR filters.",
+      "signature_moment": "The 'Innovation Launchpad': A dramatic reveal of the hackathon winning projects on a large LED screen, followed by a confetti blast and a laser light show synchronized with the winning band's final performance, symbolizing the fusion of tech and art."
+    },
+    "version": 1
   }
 }

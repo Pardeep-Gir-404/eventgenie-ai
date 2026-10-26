@@ -42,12 +42,20 @@ logger = logging.getLogger(__name__)
 class GeminiService:
     def __init__(self):
         self.client: Optional[genai.Client] = None
+        self._init_client()
+
+    def _init_client(self):
         if settings.has_gemini_key:
             try:
                 self.client = genai.Client(api_key=settings.GEMINI_API_KEY)
                 logger.info("Google GenAI client initialized successfully.")
             except Exception as e:
                 logger.warning(f"Could not initialize Google GenAI client: {e}. Falling back to rule-based engine.")
+
+    def get_client(self) -> Optional[genai.Client]:
+        if not self.client and settings.has_gemini_key:
+            self._init_client()
+        return self.client
 
     def _call_gemini_with_retry(
         self,
@@ -57,7 +65,8 @@ class GeminiService:
         max_retries: int = 3
     ) -> str:
         """Invokes Gemini API with exponential backoff on transient errors."""
-        if not self.client:
+        client = self.get_client()
+        if not client:
             raise RuntimeError("Gemini API key is not configured or client is unavailable.")
 
         config_args = {
@@ -79,7 +88,7 @@ class GeminiService:
         for attempt in range(max_retries):
             for model_name in unique_models:
                 try:
-                    response = self.client.models.generate_content(
+                    response = client.models.generate_content(
                         model=model_name,
                         contents=prompt,
                         config=config
@@ -111,7 +120,7 @@ class GeminiService:
         """
         raw_output: Optional[RawPlanGeneration] = None
 
-        if settings.has_gemini_key and self.client:
+        if self.get_client():
             try:
                 # Step (a) & (b): Generate structured plan
                 user_prompt = f"""
@@ -222,7 +231,7 @@ Please construct the structured plan according to the schema.
         curr = req.current_plan
         patch: Optional[RawPlanPatch] = None
 
-        if settings.has_gemini_key and self.client:
+        if self.get_client():
             try:
                 prompt = f"""
 EXISTING EVENT PLAN SUMMARY:
@@ -349,7 +358,7 @@ Generate a structured RawPlanPatch with the necessary updates.
         section = req.section.lower().strip()
         curr = req.current_plan
         
-        if settings.has_gemini_key and self.client:
+        if self.get_client():
             try:
                 prompt = REGENERATE_SECTION_PROMPT.format(
                     section=section,
