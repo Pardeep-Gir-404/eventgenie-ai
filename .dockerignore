@@ -1,0 +1,30 @@
+# Version control & environments
+.git
+.gitignore
+.env
+*.env
+backend/.env
+
+# Node & Frontend build artifacts
+frontend/node_modules
+frontend/dist
+node_modules
+dist
+
+# Python artifacts
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.coverage
+htmlcov
+backend/__pycache__
+backend/*/__pycache__
+backend/*/*/__pycache__
+
+# IDE & OS files
+.vscode
+.idea
+.DS_Store
+Thumbs.db
