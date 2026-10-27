@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
   :root {
@@ -40,7 +41,48 @@ body.dark {
   color: #e2e8f0;
 }
 
-/* Custom Glassmorphism & Animations */
+/* ---------- Dark mode text fixes ---------- */
+
+/* Text elements use the light color in dark mode */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark p,
+.dark label,
+.dark li,
+.dark td,
+.dark th {
+  color: #e2e8f0;
+}
+
+/* Override hard-coded dark Tailwind text classes in dark mode */
+.dark .text-black,
+.dark .text-gray-700,
+.dark .text-gray-800,
+.dark .text-gray-900,
+.dark .text-slate-700,
+.dark .text-slate-800,
+.dark .text-slate-900 {
+  color: #f1f5f9 !important;
+}
+
+/* Form fields */
+.dark input,
+.dark textarea,
+.dark select {
+  color: #f1f5f9;
+  background-color: rgba(15, 23, 42, 0.6);
+  border-color: rgba(71, 85, 105, 0.8);
+}
+
+.dark ::placeholder {
+  color: #94a3b8;
+}
+
+/* ---------- Custom Glassmorphism & Animations ---------- */
 .glass-panel {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
@@ -108,6 +150,28 @@ body.dark {
 @media print {
   body {
     background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* Keep printed text black even if the page is in dark mode */
+  .dark h1,
+  .dark h2,
+  .dark h3,
+  .dark h4,
+  .dark h5,
+  .dark h6,
+  .dark p,
+  .dark label,
+  .dark li,
+  .dark td,
+  .dark th,
+  .dark .text-black,
+  .dark .text-gray-700,
+  .dark .text-gray-800,
+  .dark .text-gray-900,
+  .dark .text-slate-700,
+  .dark .text-slate-800,
+  .dark .text-slate-900 {
     color: #000000 !important;
   }
 
