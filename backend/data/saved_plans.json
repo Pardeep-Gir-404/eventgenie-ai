@@ -2988,5 +2988,747 @@
       "signature_moment": "The 'Innovation Launchpad': A dramatic reveal of the hackathon winning projects on a large LED screen, followed by a confetti blast and a laser light show synchronized with the winning band's final performance, symbolizing the fusion of tech and art."
     },
     "version": 1
+  },
+  "plan_1792992708_mum": {
+    "id": "plan_1792992708_mum",
+    "created_at": "2026-10-26T11:01:48.043265",
+    "updated_at": "2026-10-26T11:01:48.043265",
+    "request": {
+      "event_type": "wedding",
+      "title": "Aarav",
+      "city": "Mumbai",
+      "date": "2026-11-20",
+      "guest_count": 150,
+      "total_budget": 1200000.0,
+      "currency": "INR",
+      "theme": "Regal Rajasthani Heritage with Candlelight & Marigolds",
+      "food_preference": "veg",
+      "setting": "hybrid",
+      "cultural_preferences": "Traditional Rajasthani Pheras, Sangeet & Folk Fusion",
+      "special_requests": "Drone photography, live folk musicians, zero single-use plastics"
+    },
+    "ai_reasoning": {
+      "theme_and_cultural_framing": "The 'Regal Rajasthani Heritage with Candlelight & Marigolds' theme is perfectly suited for Mumbai's grand banquet halls or open-air lawns, allowing for a luxurious yet culturally authentic celebration. We'll leverage rich fabrics, traditional motifs, and the warmth of marigolds and candlelight to transport guests to Rajasthan, even in the heart of Mumbai. The pure vegetarian preference aligns well with traditional Rajasthani cuisine.",
+      "budget_strategy": "With 150 guests and a 12 Lakh INR budget (approx. 8,000 INR per guest), we're focusing on maximizing impact in key areas: Venue & Catering, and Decor & Ambience, which are critical for a 'Regal Rajasthani' feel. Smart savings will be implemented in invitations and logistics, and a healthy contingency is maintained for Mumbai's dynamic vendor landscape.",
+      "seasonality_and_weather": "November in Mumbai is ideal for events, offering pleasant, dry weather after the monsoon season. This allows for comfortable outdoor or hybrid settings, perfect for a Sangeet under the stars or a Phera ceremony in a well-decorated lawn without concerns of rain or excessive humidity.",
+      "guest_experience_focus": "The guest experience will be immersive, from the moment they receive the culturally themed invite to the vibrant Sangeet with folk fusion, the authentic Rajasthani feast, and the serene Pheras. Interactive elements and thoughtful favors will ensure a memorable celebration of culture and love.",
+      "risk_mitigation": "Mumbai's traffic can be a challenge, so vendor coordination and guest transport planning are crucial. We'll ensure venues have robust power backups and clear sound policies. A contingency buffer is essential for any last-minute changes or unexpected costs typical in a bustling city like Mumbai."
+    },
+    "budget": {
+      "total_budget": 1200000.0,
+      "currency": "INR",
+      "guest_count": 150,
+      "cost_per_guest": 8000.0,
+      "allocated_total": 1200000.0,
+      "contingency_percentage": 6.0,
+      "contingency_amount": 72000.0,
+      "categories": [
+        {
+          "category": "Venue & Catering",
+          "percentage": 42.0,
+          "amount": 504000.0,
+          "notes": "Premium banquet hall or hotel lawn in Mumbai, including a lavish pure-veg Rajasthani and North Indian spread with live counters.",
+          "per_guest_amount": 3360.0
+        },
+        {
+          "category": "Decor & Ambience",
+          "percentage": 20.0,
+          "amount": 240000.0,
+          "notes": "Extensive marigold and candlelight decor, traditional Rajasthani fabric drapes, brass elements, and floral backdrops.",
+          "per_guest_amount": 1600.0
+        },
+        {
+          "category": "Photography & Videography",
+          "percentage": 12.0,
+          "amount": 144000.0,
+          "notes": "2 candid photographers, 1 traditional videographer, and dedicated drone coverage for key moments like Baraat and Pheras.",
+          "per_guest_amount": 960.0
+        },
+        {
+          "category": "Entertainment & Music",
+          "percentage": 9.0,
+          "amount": 108000.0,
+          "notes": "Live folk musicians (Manganiyars/Langas), DJ for Sangeet, and traditional dhol players for Baraat.",
+          "per_guest_amount": 720.0
+        },
+        {
+          "category": "Attire & Styling",
+          "percentage": 6.0,
+          "amount": 72000.0,
+          "notes": "Bridal lehenga, groom's sherwani, professional makeup artist, and hair stylist.",
+          "per_guest_amount": 480.0
+        },
+        {
+          "category": "Invitations & Favors",
+          "percentage": 3.0,
+          "amount": 36000.0,
+          "notes": "E-invitations with a regal design, and eco-friendly, culturally relevant return favors.",
+          "per_guest_amount": 240.0
+        },
+        {
+          "category": "Logistics & Transport",
+          "percentage": 2.0,
+          "amount": 24000.0,
+          "notes": "Limited local transport for key family members, vendor transport, and baraat arrangements.",
+          "per_guest_amount": 160.0
+        },
+        {
+          "category": "Contingency Buffer",
+          "percentage": 6.0,
+          "amount": 72000.0,
+          "notes": "Reserve for unexpected costs, last-minute vendor upgrades, or unforeseen logistical challenges in Mumbai.",
+          "per_guest_amount": 480.0
+        }
+      ],
+      "cost_saving_ideas": [
+        {
+          "id": "saving-1",
+          "title": "Local Flower Market Sourcing for Marigolds",
+          "description": "Instead of relying solely on venue florists, directly source bulk marigolds and other traditional flowers from Mumbai's Dadar flower market. This can significantly reduce decor costs for the main floral elements.",
+          "target_category": "Decor & Ambience",
+          "estimated_savings_percentage": 25.0,
+          "estimated_savings_amount": 60000.0,
+          "tradeoff": "Requires dedicated coordination for early morning pickup and transport to the venue, potentially needing an additional person for supervision."
+        },
+        {
+          "id": "saving-2",
+          "title": "Hybrid Digital & Minimalist Physical Invites",
+          "description": "Opt for beautifully designed digital video invitations for most guests, and only send a small batch of elegant, simple physical invites to close family and elders. This reduces printing and courier costs significantly.",
+          "target_category": "Invitations & Favors",
+          "estimated_savings_percentage": 35.0,
+          "estimated_savings_amount": 12600.0,
+          "tradeoff": "Some guests might prefer a traditional physical invite, but the digital version can be more interactive and shareable."
+        },
+        {
+          "id": "saving-3",
+          "title": "Curated Regional Menu Focus",
+          "description": "Instead of an extensive multi-cuisine buffet, focus on a well-curated, authentic Rajasthani and North Indian menu with 4-5 live stations. This reduces food waste and allows for higher quality ingredients in fewer dishes.",
+          "target_category": "Venue & Catering",
+          "estimated_savings_percentage": 15.0,
+          "estimated_savings_amount": 75600.0,
+          "tradeoff": "Fewer international options might be available, but the authenticity and quality of the chosen dishes will be higher, enhancing the cultural theme."
+        },
+        {
+          "id": "saving-4",
+          "title": "Leverage In-House AV for Sangeet",
+          "description": "Many Mumbai venues have decent in-house sound and basic lighting systems. Utilize these for the Sangeet rather than hiring an external, high-end AV vendor for basic requirements.",
+          "target_category": "Entertainment & Music",
+          "estimated_savings_percentage": 10.0,
+          "estimated_savings_amount": 10800.0,
+          "tradeoff": "May not offer the same level of sophisticated lighting effects or sound clarity as a specialized external vendor, but sufficient for a lively Sangeet."
+        }
+      ]
+    },
+    "timeline": {
+      "is_rush_plan": false,
+      "days_until_event": 25,
+      "tasks": [
+        {
+          "id": "task-1",
+          "title": "Venue & Primary Vendor Booking (Mumbai)",
+          "description": "Finalize and book the banquet hall/lawn in Mumbai, catering (if external), and secure major vendors like decorators and photographers. Confirm sound policies and capacity.",
+          "days_before_event": 25,
+          "deadline_date": "2026-10-26",
+          "phase": "Planning & Booking",
+          "priority": "High",
+          "owner_suggestion": "Couple & Host Family",
+          "status": "Not started"
+        },
+        {
+          "id": "task-2",
+          "title": "Catering Tasting & Menu Finalization",
+          "description": "Conduct a comprehensive tasting session for the pure-veg Rajasthani menu. Finalize all dishes, live counters, and beverage options.",
+          "days_before_event": 25,
+          "deadline_date": "2026-10-26",
+          "phase": "Food & Beverage",
+          "priority": "High",
+          "owner_suggestion": "Food Committee & Couple",
+          "status": "Not started"
+        },
+        {
+          "id": "task-3",
+          "title": "Decor Concept & Layout Approval",
+          "description": "Meet with the decorator to finalize marigold and candlelight concepts, stage design, seating arrangements, and traditional Rajasthani elements. Approve mock-ups.",
+          "days_before_event": 25,
+          "deadline_date": "2026-10-26",
+          "phase": "Design & Decor",
+          "priority": "High",
+          "owner_suggestion": "Couple & Decor Lead",
+          "status": "Not started"
+        },
+        {
+          "id": "task-4",
+          "title": "Entertainment & Musician Booking",
+          "description": "Confirm live folk musicians, DJ for Sangeet, and dhol players. Finalize song lists and performance schedules.",
+          "days_before_event": 25,
+          "deadline_date": "2026-10-26",
+          "phase": "Entertainment",
+          "priority": "Medium",
+          "owner_suggestion": "Couple & Entertainment Coordinator",
+          "status": "Not started"
+        },
+        {
+          "id": "task-5",
+          "title": "Send Digital Invitations & Collect RSVPs",
+          "description": "Dispatch beautifully designed digital invitations via WhatsApp/email and begin collecting RSVPs to get an accurate headcount.",
+          "days_before_event": 25,
+          "deadline_date": "2026-10-26",
+          "phase": "Guest Relations",
+          "priority": "High",
+          "owner_suggestion": "Host Family",
+          "status": "Not started"
+        },
+        {
+          "id": "task-6",
+          "title": "Attire Fittings & Styling Finalization",
+          "description": "Complete all fittings for bridal and groom's attire. Finalize makeup artist and hairstylist bookings and trial sessions.",
+          "days_before_event": 20,
+          "deadline_date": "2026-10-31",
+          "phase": "Personal Styling",
+          "priority": "Medium",
+          "owner_suggestion": "Couple",
+          "status": "Not started"
+        },
+        {
+          "id": "task-7",
+          "title": "Final Vendor Confirmations & Payments",
+          "description": "Reconfirm all vendor bookings, timings, and outstanding payments. Share a detailed itinerary with all key vendors.",
+          "days_before_event": 7,
+          "deadline_date": "2026-11-13",
+          "phase": "Logistics & Payments",
+          "priority": "High",
+          "owner_suggestion": "Lead Planner / Coordinator",
+          "status": "Not started"
+        },
+        {
+          "id": "task-8",
+          "title": "Event Day Coordination & Execution",
+          "description": "Oversee setup, guest arrivals, Baraat procession, Sangeet performances, Pheras, and catering service. Ensure smooth flow.",
+          "days_before_event": 0,
+          "deadline_date": "2026-11-20",
+          "phase": "Event Day",
+          "priority": "High",
+          "owner_suggestion": "All Team Leads",
+          "status": "Not started"
+        }
+      ],
+      "completion_percentage": 0.0
+    },
+    "vendor_checklists": [
+      {
+        "id": "v-venue-mumbai",
+        "category": "Venue & Catering",
+        "what_to_ask": [
+          "What are your pure vegetarian catering packages, and can you accommodate specific Rajasthani dishes?",
+          "What is your policy on outside decor vendors, especially for extensive floral and lighting setups?",
+          "Do you have reliable power backup and sound systems suitable for a Sangeet and Pheras?",
+          "What are the parking facilities and valet services available for 150 guests in Mumbai?"
+        ],
+        "what_to_confirm": [
+          "Detailed breakdown of per-plate cost, including all taxes and service charges.",
+          "Availability of separate kitchens or cooking areas for pure vegetarian food.",
+          "Clear understanding of sound curfews and any restrictions on live music.",
+          "Inclusion of basic furniture, linens, and service staff."
+        ],
+        "negotiation_tips": [
+          "Negotiate complimentary rooms for the bridal party for getting ready.",
+          "Ask for a waiver on corkage fees if bringing specific non-alcoholic beverages.",
+          "Try to bundle welcome drinks and a late-night snack counter into the main package."
+        ],
+        "red_flags": [
+          "Unwillingness to provide a detailed, itemized quote.",
+          "Lack of clarity on cancellation policies or force majeure clauses.",
+          "Poor communication or delayed responses during the inquiry phase."
+        ],
+        "draft_inquiry_message": "Dear [Venue Name] Team, We are planning a pure-vegetarian wedding for 150 guests on November 20, 2026, in Mumbai, with a 'Regal Rajasthani' theme. We are interested in your banquet hall/lawn for our Sangeet and Phera ceremonies. Could you please share your wedding packages, pure-veg menu options, and availability? We'd also like to know your policy on external decor and live music.",
+        "completed_checks": []
+      },
+      {
+        "id": "v-decor-mumbai",
+        "category": "Decor & Ambience",
+        "what_to_ask": [
+          "Can you provide a portfolio of your Rajasthani-themed decor work, especially with marigolds and candlelight?",
+          "How do you ensure the freshness of flowers, particularly marigolds, throughout the event?",
+          "What are your options for traditional Rajasthani props, fabrics, and lighting elements?",
+          "Do you handle all necessary permits for outdoor decor setups in Mumbai (if applicable)?"
+        ],
+        "what_to_confirm": [
+          "Detailed mood board and 3D renderings of the decor concept.",
+          "Breakdown of all decor elements, including specific flower types, lighting fixtures, and props.",
+          "Setup and dismantle timelines, ensuring no disruption to other venue activities.",
+          "Contingency plans for any decor damage or last-minute changes."
+        ],
+        "negotiation_tips": [
+          "Ask for a discount if you allow them to use your event photos for their portfolio.",
+          "Negotiate complimentary additions like a small photo booth backdrop or entrance decor.",
+          "Consider reusing decor elements from one event to another (e.g., Sangeet stage backdrop for Pheras)."
+        ],
+        "red_flags": [
+          "Vague answers about specific decor elements or materials.",
+          "No clear portfolio or references for similar themed events.",
+          "Unwillingness to provide a detailed breakdown of costs for each decor item."
+        ],
+        "draft_inquiry_message": "Hello [Decor Vendor Name], We are planning a wedding in Mumbai on November 20, 2026, with a 'Regal Rajasthani Heritage' theme, featuring extensive marigolds and candlelight. We need decor for a Sangeet and Phera ceremony for 150 guests. Could you please share your portfolio for similar themes and discuss how you can bring our vision to life? We are keen on traditional props and vibrant floral arrangements.",
+        "completed_checks": []
+      },
+      {
+        "id": "v-photo-mumbai",
+        "category": "Photography & Videography",
+        "what_to_ask": [
+          "Can you share full wedding albums and cinematic highlight reels from previous Rajasthani-themed events?",
+          "What is your experience with drone photography in Mumbai, including any necessary permissions?",
+          "What is your team size for 150 guests, including candid, traditional, and drone operators?",
+          "What is the delivery timeline for raw photos, edited photos, and the final video?"
+        ],
+        "what_to_confirm": [
+          "Specific number of edited photos and duration of highlight/full video.",
+          "Inclusion of pre-wedding shoot or candid coverage for smaller events (Mehendi).",
+          "Backup equipment and contingency plan for unforeseen technical issues.",
+          "Clear understanding of event schedule and key moments to capture."
+        ],
+        "negotiation_tips": [
+          "Negotiate an extra hour of coverage or a few more edited photos.",
+          "Ask for a complimentary photo album or a framed print.",
+          "Bundle drone photography into the main package for a better rate."
+        ],
+        "red_flags": [
+          "Only showing highlight reels, not full event albums.",
+          "Unclear pricing structure or hidden charges for additional edits/prints.",
+          "Lack of professional contracts or vague terms of service."
+        ],
+        "draft_inquiry_message": "Greetings [Photography/Videography Team], We are looking for a creative and experienced team to capture our wedding in Mumbai on November 20, 2026. We'd love to see your portfolio, especially for Rajasthani-themed weddings. We require 2 candid photographers, 1 traditional videographer, and drone photography. Please provide details on your packages, deliverables, and availability.",
+        "completed_checks": []
+      },
+      {
+        "id": "v-entertainment-mumbai",
+        "category": "Entertainment & Music",
+        "what_to_ask": [
+          "Can you provide samples or videos of your live folk musicians (Manganiyars/Langas) performing?",
+          "What is your experience coordinating Sangeet performances with a DJ and live artists?",
+          "Do you handle all sound equipment, microphones, and stage setup for the artists?",
+          "What are your charges for dhol players for the Baraat procession in Mumbai?"
+        ],
+        "what_to_confirm": [
+          "Artist availability and backup artists in case of emergencies.",
+          "Detailed schedule of performances and sound checks.",
+          "Clear understanding of cultural preferences for music selection.",
+          "Inclusion of MC services if required for Sangeet."
+        ],
+        "negotiation_tips": [
+          "Book multiple artists from the same agency for a package deal.",
+          "Negotiate extended performance time for a slightly higher fee.",
+          "Ask for a complimentary background music setup during dinner."
+        ],
+        "red_flags": [
+          "Lack of professional recordings or live performance videos.",
+          "Unwillingness to provide a detailed contract with artist names.",
+          "Demanding full payment upfront without a clear cancellation policy."
+        ],
+        "draft_inquiry_message": "Hello [Entertainment Agency/Artist], We are seeking live folk musicians (Manganiyars/Langas), a DJ for Sangeet, and dhol players for our wedding in Mumbai on November 20, 2026. Our theme is 'Regal Rajasthani Heritage'. Could you please share your artist profiles, performance videos, and package details? We are keen on a vibrant and culturally rich musical experience.",
+        "completed_checks": []
+      }
+    ],
+    "creative_ideas": {
+      "decor_concept": "A 'Marigold & Candlelight Oasis' featuring cascading marigold garlands, brass lanterns, and hundreds of floating diyas creating a warm, ethereal glow. Traditional Rajasthani 'bandhani' and 'leheriya' fabrics draped elegantly, with intricate 'mandana' art motifs on floorings and backdrops. A grand Phera mandap adorned with fresh marigolds and jasmine, illuminated by soft uplighting.",
+      "invitation_wording": "With hearts full of joy and spirits united, Aarav and [Partner's Name] invite you to witness their sacred union. Join us as we celebrate our love amidst the regal charm of Rajasthan, brought to life in vibrant Mumbai. Your presence is our most cherished blessing.",
+      "entertainment": [
+        "Live Manganiyar/Langa folk musicians performing soulful Rajasthani melodies during the welcome and dinner.",
+        "High-energy Sangeet night with a fusion DJ playing Bollywood hits mixed with Rajasthani folk beats, encouraging interactive dance.",
+        "Traditional Dhol and Nagada players leading the Baraat procession with grand fanfare.",
+        "A 'Kalbelia' dance performance during the Sangeet, showcasing the vibrant folk culture of Rajasthan."
+      ],
+      "games_and_activities": [
+        "Interactive 'Pagdi Tying' (turban tying) station for guests, with a friendly competition for the best-tied turban.",
+        "Live Mehendi artists offering traditional and contemporary designs during a pre-wedding function or Sangeet.",
+        "A 'Guess the Rajasthani Folk Song' game during the Sangeet, with small prizes for winners.",
+        "A 'Puppet Show' (Kathputli) corner for younger guests and those seeking a nostalgic cultural experience."
+      ],
+      "return_gifts_favors": [
+        "Small, intricately painted wooden elephants or camels, symbolizing good luck and Rajasthani artistry.",
+        "Hand-stitched 'potli' bags filled with organic Rajasthani spices or traditional 'gulkand' (rose petal preserve).",
+        "Plantable seed paper cards embedded with marigold seeds, promoting sustainability and growth.",
+        "Miniature bottles of fragrant 'attar' (natural perfume oil) from Rajasthan."
+      ],
+      "curated_menu_highlights": [
+        "Live 'Dal Baati Churma' station with various types of 'churma' and accompaniments.",
+        "Authentic 'Gatte ki Sabzi' and 'Ker Sangri' as main course highlights.",
+        "A 'Mirchi Vada' and 'Pyaaz Kachori' live counter for savory snacks.",
+        "Dessert spread featuring 'Malpua with Rabri' and 'Mohanthal' served in traditional clay pots.",
+        "Welcome drinks like 'Kesar Thandai' and 'Jaljeera' served in brass glasses."
+      ],
+      "photo_booth_concept": "A 'Rajasthani Courtyard' themed photo booth with a vibrant 'jharokha' (ornate window) backdrop, colorful 'gaddas' (cushions), traditional 'charpais' (woven beds), and props like turbans, moustaches, and folk musical instruments.",
+      "signature_moment": "A grand entrance for the couple under a canopy of fresh marigolds, carried by family members, as live folk musicians play a celebratory tune and guests shower them with rose petals. The Pheras will be performed under a beautifully lit marigold mandap, with soft candlelight creating an intimate and sacred atmosphere."
+    },
+    "version": 1
+  },
+  "plan_1792993698_pun": {
+    "id": "plan_1792993698_pun",
+    "created_at": "2026-10-26T11:18:18.379892",
+    "updated_at": "2026-10-26T11:18:18.379892",
+    "request": {
+      "event_type": "birthday",
+      "title": "Aanya's 5th Birthday Carnival",
+      "city": "Pune",
+      "date": "2026-12-05",
+      "guest_count": 40,
+      "total_budget": 120000.0,
+      "currency": "INR",
+      "theme": "Carnival & Fairground Circus",
+      "food_preference": "veg",
+      "setting": "indoor",
+      "cultural_preferences": "Kid-friendly activities, cotton candy and balloon twisting",
+      "special_requests": "Nut-free food menu"
+    },
+    "ai_reasoning": {
+      "theme_and_cultural_framing": "The 'Carnival & Fairground Circus' theme is perfect for a 5th birthday, offering vibrant colors, playful activities, and a joyful atmosphere. We've ensured all food is strictly nut-free to prioritize child safety, a critical cultural and health consideration for children's parties. The theme allows for high engagement and memorable experiences for young guests.",
+      "budget_strategy": "With 40 guests and a 1.2 Lakh INR budget (3000 INR per guest), the strategy focuses on maximizing the 'fun' elements: engaging entertainment, vibrant decor, and a safe, appealing nut-free food menu. We allocate a significant portion to entertainment and decor, as these are key drivers for a successful kids' carnival. A healthy contingency is included for unexpected needs.",
+      "seasonality_and_weather": "December in Pune offers pleasant, dry weather, making it ideal for indoor events without concerns of excessive heat or humidity. An indoor setting ensures comfort for children and parents, regardless of any slight evening chill, and provides a controlled environment for carnival activities.",
+      "guest_experience_focus": "The primary focus is on creating a magical and interactive experience for Aanya and her young friends. This includes hands-on carnival games, engaging live entertainment, and delicious, safe treats. For parents, a comfortable seating area and clear communication regarding the nut-free menu will ensure peace of mind.",
+      "risk_mitigation": "Key risks include food allergies (mitigated by a strict nut-free menu and clear vendor communication), entertainment reliability (mitigated by booking reputable artists with backup plans), and potential for over-excitement (mitigated by supervised activities and a clear event flow). A contingency buffer addresses any last-minute needs or minor emergencies."
+    },
+    "budget": {
+      "total_budget": 120000.0,
+      "currency": "INR",
+      "guest_count": 40,
+      "cost_per_guest": 3000.0,
+      "allocated_total": 120000.0,
+      "contingency_percentage": 7.0,
+      "contingency_amount": 8400.0,
+      "categories": [
+        {
+          "category": "Venue & Catering",
+          "percentage": 40.0,
+          "amount": 48000.0,
+          "notes": "Includes rental of a kid-friendly party hall in Pune and a comprehensive nut-free vegetarian menu with carnival snacks.",
+          "per_guest_amount": 1200.0
+        },
+        {
+          "category": "Decor & Ambience",
+          "percentage": 18.0,
+          "amount": 21600.0,
+          "notes": "Vibrant carnival-themed decorations, balloons, streamers, backdrops, and table settings.",
+          "per_guest_amount": 540.0
+        },
+        {
+          "category": "Entertainment & Music",
+          "percentage": 20.0,
+          "amount": 24000.0,
+          "notes": "Magician, balloon artist, carnival game stalls, and a kid-friendly music playlist.",
+          "per_guest_amount": 600.0
+        },
+        {
+          "category": "Photography & Videography",
+          "percentage": 8.0,
+          "amount": 9600.0,
+          "notes": "One dedicated photographer for candid shots and key moments.",
+          "per_guest_amount": 240.0
+        },
+        {
+          "category": "Invitations & Favors",
+          "percentage": 5.0,
+          "amount": 6000.0,
+          "notes": "Digital invitations and small, age-appropriate, nut-free return gifts.",
+          "per_guest_amount": 150.0
+        },
+        {
+          "category": "Logistics & Transport",
+          "percentage": 2.0,
+          "amount": 2400.0,
+          "notes": "Minimal transport for vendors and supplies within Pune.",
+          "per_guest_amount": 60.0
+        },
+        {
+          "category": "Contingency Buffer",
+          "percentage": 7.0,
+          "amount": 8400.0,
+          "notes": "For unexpected costs, additional activities, or last-minute changes.",
+          "per_guest_amount": 210.0
+        }
+      ],
+      "cost_saving_ideas": [
+        {
+          "id": "saving-1",
+          "title": "DIY Carnival Game Booths",
+          "description": "Instead of renting expensive game stalls, create simple DIY versions like ring toss, bean bag throw, or 'feed the clown' using cardboard and paint. Involve family members in the crafting process.",
+          "target_category": "Decor & Ambience",
+          "estimated_savings_percentage": 15.0,
+          "estimated_savings_amount": 3240.0,
+          "tradeoff": "Requires time and effort for preparation, and may not look as polished as professional rentals."
+        },
+        {
+          "id": "saving-2",
+          "title": "Local Talent for Entertainment",
+          "description": "Instead of high-end agencies, scout for talented local college students or aspiring artists in Pune who offer balloon twisting, face painting, or magic shows at more competitive rates.",
+          "target_category": "Entertainment & Music",
+          "estimated_savings_percentage": 20.0,
+          "estimated_savings_amount": 4800.0,
+          "tradeoff": "May require more thorough vetting and clear communication of expectations to ensure professionalism."
+        },
+        {
+          "id": "saving-3",
+          "title": "Digital-First Invitations",
+          "description": "Utilize animated digital invitations sent via WhatsApp or email, featuring the carnival theme. This eliminates printing and postage costs entirely.",
+          "target_category": "Invitations & Favors",
+          "estimated_savings_percentage": 30.0,
+          "estimated_savings_amount": 1800.0,
+          "tradeoff": "Lacks the tangible keepsake quality of physical invitations, though this is less critical for a kids' party."
+        },
+        {
+          "id": "saving-4",
+          "title": "Bulk Purchase for Return Favors",
+          "description": "Buy small, generic, age-appropriate toys, stationery, or bubbles in bulk from wholesale markets in Pune (e.g., Laxmi Road area) rather than curated party favor packs.",
+          "target_category": "Invitations & Favors",
+          "estimated_savings_percentage": 25.0,
+          "estimated_savings_amount": 1500.0,
+          "tradeoff": "May require more effort in packaging and presentation to make them special."
+        }
+      ]
+    },
+    "timeline": {
+      "is_rush_plan": false,
+      "days_until_event": 40,
+      "tasks": [
+        {
+          "id": "task-1",
+          "title": "Finalize Party Hall & Date",
+          "description": "Book a suitable kid-friendly party hall in Pune, confirming availability for December 5th, 2026, and their nut-free food policy.",
+          "days_before_event": 40,
+          "deadline_date": "2026-10-26",
+          "phase": "Planning & Venue",
+          "priority": "High",
+          "owner_suggestion": "Parents",
+          "status": "Not started"
+        },
+        {
+          "id": "task-2",
+          "title": "Book Key Entertainment (Magician/Balloon Artist)",
+          "description": "Secure primary entertainers known for working with young children, confirming their availability and nut-free policy if they handle any props that might be ingested.",
+          "days_before_event": 40,
+          "deadline_date": "2026-10-26",
+          "phase": "Entertainment",
+          "priority": "High",
+          "owner_suggestion": "Parents",
+          "status": "Not started"
+        },
+        {
+          "id": "task-3",
+          "title": "Design & Send Digital Invitations",
+          "description": "Create a fun, carnival-themed digital invite and send it out to all guests, requesting RSVPs.",
+          "days_before_event": 40,
+          "deadline_date": "2026-10-26",
+          "phase": "Guest Relations",
+          "priority": "Medium",
+          "owner_suggestion": "Parents",
+          "status": "Not started"
+        },
+        {
+          "id": "task-4",
+          "title": "Plan Nut-Free Menu & Cake",
+          "description": "Work with the caterer or a specialized baker to finalize a kid-friendly, strictly nut-free menu and the birthday cake design.",
+          "days_before_event": 40,
+          "deadline_date": "2026-10-26",
+          "phase": "Food & Beverage",
+          "priority": "High",
+          "owner_suggestion": "Parents",
+          "status": "Not started"
+        },
+        {
+          "id": "task-5",
+          "title": "Purchase Return Favors",
+          "description": "Buy and prepare small, age-appropriate, nut-free return gifts for all the children.",
+          "days_before_event": 30,
+          "deadline_date": "2026-11-05",
+          "phase": "Favors",
+          "priority": "Medium",
+          "owner_suggestion": "Parents",
+          "status": "Not started"
+        },
+        {
+          "id": "task-6",
+          "title": "Finalize Decor Details",
+          "description": "Confirm balloon arrangements, backdrops, and other carnival-themed decor elements with the decorator.",
+          "days_before_event": 14,
+          "deadline_date": "2026-11-21",
+          "phase": "Decor",
+          "priority": "Medium",
+          "owner_suggestion": "Parents",
+          "status": "Not started"
+        },
+        {
+          "id": "task-7",
+          "title": "Confirm All Vendor Bookings",
+          "description": "Make final calls/messages to the venue, caterer, entertainers, and photographer to confirm timings and details.",
+          "days_before_event": 7,
+          "deadline_date": "2026-11-28",
+          "phase": "Coordination",
+          "priority": "High",
+          "owner_suggestion": "Parents",
+          "status": "Not started"
+        },
+        {
+          "id": "task-8",
+          "title": "Birthday Party Day!",
+          "description": "Oversee setup, welcome guests, coordinate activities, and ensure smooth execution of the carnival.",
+          "days_before_event": 0,
+          "deadline_date": "2026-12-05",
+          "phase": "Event Day",
+          "priority": "High",
+          "owner_suggestion": "Parents & Family Helpers",
+          "status": "Not started"
+        }
+      ],
+      "completion_percentage": 0.0
+    },
+    "vendor_checklists": [
+      {
+        "id": "v-venue-hall",
+        "category": "Party Hall / Venue",
+        "what_to_ask": [
+          "What is the maximum capacity for children and adults?",
+          "Do you have a dedicated play area or space for carnival games?",
+          "What is your policy on outside food/cake, especially for nut-free requirements?",
+          "Are there any restrictions on decor (e.g., helium balloons, confetti)?",
+          "Is there a sound system available for music and announcements?"
+        ],
+        "what_to_confirm": [
+          "Availability of high chairs and child-friendly restrooms.",
+          "Clearance for setup and teardown times for decorators and entertainers.",
+          "Emergency contact numbers for venue staff on the event day.",
+          "Confirmation of nut-free kitchen policy if in-house catering is used."
+        ],
+        "negotiation_tips": [
+          "Ask for a complimentary hour for setup/cleanup.",
+          "Inquire about package deals that might include basic decor or sound systems.",
+          "Negotiate a discount for off-peak hours or weekdays if applicable."
+        ],
+        "red_flags": [
+          "Unwillingness to provide a written nut-free food policy.",
+          "Lack of clear safety protocols for children's play areas.",
+          "Hidden charges for basic amenities like electricity or cleaning."
+        ],
+        "draft_inquiry_message": "Hello! We are planning Aanya's 5th birthday party (Carnival theme) for approx. 40 guests (20 kids, 20 adults) on Dec 5, 2026, in Pune. We need an indoor venue with a strict nut-free food policy. Could you please share your party hall packages, availability, and any specific rules regarding outside entertainment/decor? Thank you!",
+        "completed_checks": []
+      },
+      {
+        "id": "v-catering-nutfree",
+        "category": "Catering (Nut-Free)",
+        "what_to_ask": [
+          "Can you guarantee a 100% nut-free menu, including cross-contamination prevention?",
+          "What kid-friendly vegetarian options do you offer (e.g., mini pizzas, pasta, fruit skewers)?",
+          "Do you provide cotton candy and popcorn machines with nut-free ingredients?",
+          "What is your staff-to-guest ratio for a party of 40?",
+          "How do you handle food allergies and dietary restrictions beyond nuts?"
+        ],
+        "what_to_confirm": [
+          "Detailed ingredient lists for all menu items.",
+          "Food hygiene certifications and safe food handling practices.",
+          "Inclusion of kid-friendly beverages (juice boxes, water).",
+          "Setup and serving times, and cleanup responsibilities."
+        ],
+        "negotiation_tips": [
+          "Request a complimentary tasting session for the chosen menu items.",
+          "Negotiate a small discount for a fixed, pre-selected menu.",
+          "Ask for complimentary disposable plates, cutlery, and napkins."
+        ],
+        "red_flags": [
+          "Hesitation or vagueness regarding nut-free guarantees.",
+          "Lack of experience with children's party catering.",
+          "No clear communication about staff uniforms or professionalism."
+        ],
+        "draft_inquiry_message": "Dear Caterer, We are hosting Aanya's 5th birthday carnival on Dec 5, 2026, in Pune for 40 guests (mostly children). We require a strictly 100% nut-free vegetarian menu, including carnival snacks like cotton candy and popcorn. Please share your kid-friendly menu options, pricing, and your detailed allergy prevention protocols. Thank you!",
+        "completed_checks": []
+      },
+      {
+        "id": "v-entertainment",
+        "category": "Entertainment (Magician/Balloon Artist)",
+        "what_to_ask": [
+          "What is your experience performing for 5-year-olds?",
+          "Can you provide a demo video or references from previous kids' parties?",
+          "What is the duration of your performance/activity?",
+          "Do you bring all necessary equipment and props?",
+          "What is your backup plan if you are unable to perform due to unforeseen circumstances?"
+        ],
+        "what_to_confirm": [
+          "Arrival and setup time, ensuring it's before guests arrive.",
+          "Specific activities planned (e.g., types of magic tricks, balloon shapes).",
+          "Any space or power requirements for their act.",
+          "Cost breakdown and payment schedule."
+        ],
+        "negotiation_tips": [
+          "Inquire about package deals if booking multiple artists (e.g., magician + balloon artist).",
+          "Negotiate a slightly longer performance time for a fixed rate.",
+          "Ask for a small discount for early booking."
+        ],
+        "red_flags": [
+          "No clear portfolio or references for kids' parties.",
+          "Unprofessional communication or late responses.",
+          "Demanding full payment upfront without a clear cancellation policy."
+        ],
+        "draft_inquiry_message": "Hello! We're planning Aanya's 5th birthday carnival on Dec 5, 2026, in Pune, for about 20 children. We're looking for an engaging magician and/or balloon artist. Could you please share your availability, performance details for this age group, and pricing? We prioritize child-friendly and safe entertainment. Thanks!",
+        "completed_checks": []
+      },
+      {
+        "id": "v-decor",
+        "category": "Decorations & Balloons",
+        "what_to_ask": [
+          "Can you provide carnival-themed decor examples from previous parties?",
+          "What types of balloons (helium/air-filled) and backdrops do you offer for a carnival theme?",
+          "What is included in your package (e.g., table decor, entrance arch, balloon columns)?",
+          "What is your setup and teardown process and timeline?",
+          "Do you use child-safe, non-toxic materials for decor?"
+        ],
+        "what_to_confirm": [
+          "Specific color palette and design elements for the carnival theme.",
+          "Confirmation of balloon quality to ensure they last throughout the party.",
+          "Agreement on the exact placement of decor elements within the venue.",
+          "Cleanup responsibilities after the event."
+        ],
+        "negotiation_tips": [
+          "Ask for a complimentary small balloon bouquet for the birthday child.",
+          "Negotiate a discount if combining balloon decor with other elements like a photo booth backdrop.",
+          "Inquire about using reusable props to reduce costs."
+        ],
+        "red_flags": [
+          "Lack of a clear portfolio or understanding of the carnival theme.",
+          "Unwillingness to provide a detailed decor plan or mock-up.",
+          "Charging extra for basic setup or teardown."
+        ],
+        "draft_inquiry_message": "Hi! We're planning Aanya's 5th birthday carnival in Pune on Dec 5, 2026, and need vibrant, fun decor for approx. 40 guests. We're looking for carnival-themed balloons, backdrops, and general ambience. Can you share your portfolio for kids' parties, package options, and discuss a custom decor plan? Thank you!",
+        "completed_checks": []
+      }
+    ],
+    "creative_ideas": {
+      "decor_concept": "A 'Big Top' circus tent entrance with red and white striped fabric, colorful balloon arches, whimsical animal cutouts (non-threatening), bright streamers, and fairy lights. Tables adorned with mini popcorn boxes and colorful centerpieces, creating a festive fairground atmosphere.",
+      "invitation_wording": "Roll up, roll up! Step right up and join us for Aanya's 5th Birthday Carnival! Get ready for fun, games, and treats as we celebrate our little ringmaster's special day. Date: Dec 5, 2026. Venue: [Party Hall Name], Pune. RSVP by [Date] for a spectacular time!",
+      "entertainment": [
+        "Interactive Magician with kid-friendly tricks and audience participation.",
+        "Professional Balloon Twister creating animals, swords, and hats for each child.",
+        "Face Painting booth with glitter and vibrant, child-safe paints.",
+        "Carnival Game Stalls: Ring Toss, Duck Pond, Bean Bag Toss with small prizes."
+      ],
+      "games_and_activities": [
+        "Musical Statues with upbeat circus music.",
+        "'Pin the Nose on the Clown' poster game.",
+        "Bubble machine play area for younger kids.",
+        "DIY mask-making station with pre-cut animal shapes and craft supplies."
+      ],
+      "return_gifts_favors": [
+        "Miniature circus-themed coloring books with a small pack of crayons.",
+        "Small plastic animal figurines or bouncy balls.",
+        "Personalized 'Aanya's Carnival' sticker sheets.",
+        "Individual packets of nut-free gummy candies or fruit snacks."
+      ],
+      "curated_menu_highlights": [
+        "Mini Vegetarian Pizzas and Pasta in a creamy sauce.",
+        "Crispy French Fries and Potato Smiles with ketchup.",
+        "Fresh Fruit Skewers and Vegetable Sticks with a mild dip.",
+        "Live Counter for Cotton Candy and Popcorn (nut-free ingredients).",
+        "Assorted Nut-Free Cupcakes and a vibrant Carnival-themed Birthday Cake.",
+        "Juice boxes, flavored milk, and bottled water."
+      ],
+      "photo_booth_concept": "A 'Strongman' photo booth backdrop with a painted muscular body, where kids can stand behind and pose. Include oversized foam dumbbells and a 'Guess Your Weight' scale prop.",
+      "signature_moment": "Anya's grand entrance with a 'ringmaster' (parent or entertainer) announcing her, followed by a confetti cannon burst during the cake cutting, symbolizing the joyous explosion of the carnival."
+    },
+    "version": 1
   }
 }

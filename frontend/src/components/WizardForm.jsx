@@ -67,30 +67,34 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
     return true;
   };
 
-  const handleNext = () => {
+  const handleNext = (e) => {
+    if (e) e.preventDefault();
     if (validateCurrentStep()) {
       setActiveStep(prev => Math.min(3, prev + 1));
     }
   };
 
-  const handlePrev = () => {
+  const handlePrev = (e) => {
+    if (e) e.preventDefault();
     setErrorMsg("");
     setActiveStep(prev => Math.max(1, prev - 1));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Step 3 se pehle kabhi generate nahi hoga (Enter key ya button swap se bhi nahi)
+    if (activeStep < 3) return;
     if (validateCurrentStep()) {
       onSubmit(formData);
     }
   };
 
-  // Get tomorrow's date as min
+  // Get today's date as min
   const todayStr = new Date().toISOString().split('T')[0];
 
   return (
     <div className="w-full glass-panel rounded-3xl p-6 sm:p-8 shadow-xl shadow-indigo-500/5 border border-slate-200 dark:border-slate-800">
-      
+
       {/* Step Indicator */}
       <div className="flex items-center justify-between mb-8 pb-5 border-b border-slate-200 dark:border-slate-800">
         <div className="flex items-center gap-2 sm:gap-4 w-full">
@@ -107,13 +111,12 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
                   setActiveStep(s.step);
                 }
               }}
-              className={`flex-1 text-left pb-2 border-b-2 transition-all ${
-                activeStep === s.step
+              className={`flex-1 text-left pb-2 border-b-2 transition-all ${activeStep === s.step
                   ? "border-indigo-600 text-indigo-600 dark:text-indigo-400 font-bold"
                   : activeStep > s.step
-                  ? "border-emerald-500 text-slate-700 dark:text-slate-300 font-medium"
-                  : "border-transparent text-slate-400 dark:text-slate-600 font-normal"
-              }`}
+                    ? "border-emerald-500 text-slate-700 dark:text-slate-300 font-medium"
+                    : "border-transparent text-slate-400 dark:text-slate-600 font-normal"
+                }`}
             >
               <span className="text-xs sm:text-sm block">{s.title}</span>
             </button>
@@ -130,7 +133,7 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
       )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        
+
         {/* STEP 1: Event Type, City, Date, Title */}
         {activeStep === 1 && (
           <div className="space-y-6 animate-fadeIn">
@@ -144,11 +147,10 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
                     key={type.id}
                     type="button"
                     onClick={() => handleChange("event_type", type.id)}
-                    className={`flex items-center gap-2 p-3 rounded-xl border text-left text-xs sm:text-sm font-medium transition-all ${
-                      formData.event_type === type.id
+                    className={`flex items-center gap-2 p-3 rounded-xl border text-left text-xs sm:text-sm font-medium transition-all ${formData.event_type === type.id
                         ? "bg-indigo-50 dark:bg-indigo-950/70 border-indigo-500 dark:border-indigo-400 text-indigo-700 dark:text-indigo-300 ring-2 ring-indigo-500/20"
                         : "bg-white dark:bg-slate-900/60 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-slate-300 dark:hover:border-slate-700"
-                    }`}
+                      }`}
                   >
                     <span className="text-lg">{type.icon}</span>
                     <span className="line-clamp-1">{type.label}</span>
@@ -285,11 +287,10 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
                       key={food.id}
                       type="button"
                       onClick={() => handleChange("food_preference", food.id)}
-                      className={`px-3 py-2 rounded-xl text-left text-xs sm:text-sm font-medium border transition ${
-                        formData.food_preference === food.id
+                      className={`px-3 py-2 rounded-xl text-left text-xs sm:text-sm font-medium border transition ${formData.food_preference === food.id
                           ? "bg-indigo-50 dark:bg-indigo-950/70 border-indigo-500 text-indigo-700 dark:text-indigo-300 ring-1 ring-indigo-500"
                           : "bg-white dark:bg-slate-900/60 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300"
-                      }`}
+                        }`}
                     >
                       {food.label}
                     </button>
@@ -308,11 +309,10 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
                       key={setting.id}
                       type="button"
                       onClick={() => handleChange("setting", setting.id)}
-                      className={`px-3 py-2 rounded-xl text-left text-xs sm:text-sm font-medium border transition ${
-                        formData.setting === setting.id
+                      className={`px-3 py-2 rounded-xl text-left text-xs sm:text-sm font-medium border transition ${formData.setting === setting.id
                           ? "bg-indigo-50 dark:bg-indigo-950/70 border-indigo-500 text-indigo-700 dark:text-indigo-300 ring-1 ring-indigo-500"
                           : "bg-white dark:bg-slate-900/60 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300"
-                      }`}
+                        }`}
                     >
                       {setting.label}
                     </button>
@@ -373,6 +373,7 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
         <div className="flex items-center justify-between pt-6 border-t border-slate-200 dark:border-slate-800">
           {activeStep > 1 ? (
             <button
+              key="back-btn"
               type="button"
               onClick={handlePrev}
               disabled={loading}
@@ -386,6 +387,7 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
 
           {activeStep < 3 ? (
             <button
+              key="next-btn"
               type="button"
               onClick={handleNext}
               className="px-6 py-2.5 rounded-xl text-sm font-semibold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md hover:shadow-indigo-500/20 transition active:scale-95"
@@ -394,6 +396,7 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
             </button>
           ) : (
             <button
+              key="submit-btn"
               type="submit"
               disabled={loading}
               className="inline-flex items-center gap-2 px-8 py-3 rounded-xl text-base font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 text-white shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all active:scale-95 disabled:opacity-50"
