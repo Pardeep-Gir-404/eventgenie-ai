@@ -32,29 +32,31 @@ import SavedPlansDrawer from './components/SavedPlansDrawer';
 import { api } from './services/api';
 import { formatCurrency, getCurrencySymbol } from './utils/currency';
 
-const INITIAL_FORM = {
-  event_type: "wedding",
+// Blank form: date "" hone par browser mm/dd/yyyy placeholder dikhata hai
+const EMPTY_FORM = {
+  event_type: "",
   title: "",
-  city: "Jaipur",
-  date: "2026-11-20",
-  guest_count: 150,
-  total_budget: 1200000,
-  currency: "INR",
-  theme: "Regal Rajasthani Heritage with Candlelight & Marigolds",
-  food_preference: "veg",
-  setting: "hybrid",
-  cultural_preferences: "Traditional Rajasthani Pheras, Sangeet & Folk Fusion",
-  special_requests: "Drone photography, live folk musicians, zero single-use plastics"
+  city: "",
+  date: "",
+  guest_count: "",
+  total_budget: "",
+  currency: "INR", // dropdown ke liye ek default zaroori hai
+  theme: "",
+  food_preference: "",
+  setting: "",
+  cultural_preferences: "",
+  special_requests: ""
 };
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const [formData, setFormData] = useState(INITIAL_FORM);
+  const [formData, setFormData] = useState({ ...EMPTY_FORM });
+  const [formKey, setFormKey] = useState(0);
   const [activePlan, setActivePlan] = useState(null);
   const [loading, setLoading] = useState(false);
   const [refining, setRefining] = useState(false);
   const [regeneratingSection, setRegeneratingSection] = useState(null);
-  
+
   const [activeTab, setActiveTab] = useState("budget"); // budget | timeline | vendors | creative | refiner
   const [demos, setDemos] = useState([]);
   const [savedPlans, setSavedPlans] = useState([]);
@@ -111,6 +113,16 @@ export default function App() {
     }
   };
 
+  // New Plan: sab kuch blank karke Step 1 pe wapas
+  const handleNewPlan = () => {
+    setActivePlan(null);
+    setFormData({ ...EMPTY_FORM });
+    setChatHistory([]);
+    setActiveTab("budget");
+    setFormKey(k => k + 1); // WizardForm remount -> Step 1
+    window.history.pushState({}, document.title, window.location.pathname);
+  };
+
   // Generate Plan Handler
   const handleGeneratePlan = async (dataToSubmit) => {
     setLoading(true);
@@ -120,7 +132,7 @@ export default function App() {
       setActiveTab("budget");
       triggerConfetti();
       // Refresh saved plans
-      api.listPlans().then(setSavedPlans).catch(() => {});
+      api.listPlans().then(setSavedPlans).catch(() => { });
     } catch (err) {
       alert(`Plan Generation Error: ${err.message}`);
     } finally {
@@ -181,12 +193,16 @@ export default function App() {
       };
       setChatHistory(prev => [...prev, aiMsg]);
       triggerConfetti();
-      api.listPlans().then(setSavedPlans).catch(() => {});
+      api.listPlans().then(setSavedPlans).catch(() => { });
     } catch (err) {
       alert(`Refinement Error: ${err.message}`);
     } finally {
       setRefining(false);
     }
+  };
+
+  const setRegenerateSectionLocal = (name) => {
+    setRegeneratingSection(name);
   };
 
   // Regenerate Single Creative Section
@@ -204,10 +220,6 @@ export default function App() {
     } finally {
       setRegenerateSectionLocal(null);
     }
-  };
-
-  const setRegenerateSectionLocal = (name) => {
-    setRegeneratingSection(name);
   };
 
   // Toggle Timeline Task
@@ -260,33 +272,30 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col transition-colors">
-      
+
       {/* Top Navigation */}
       <Navbar
         darkMode={darkMode}
         setDarkMode={setDarkMode}
         onOpenSavedPlans={() => setIsSavedDrawerOpen(true)}
-        onNewPlan={() => {
-          setActivePlan(null);
-          window.history.pushState({}, document.title, window.location.pathname);
-        }}
+        onNewPlan={handleNewPlan}
         savedPlansCount={savedPlans.length}
         health={health}
       />
 
       {/* Main Container */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        
+
         {loading ? (
           <LoadingSkeleton
             city={formData.city || "your chosen destination"}
             eventType={formData.event_type || "event"}
           />
         ) : !activePlan ? (
-          
+
           /* VIEW 1: HERO & WIZARD FORM */
           <div className="max-w-4xl mx-auto space-y-8 animate-fadeIn">
-            
+
             {/* Hero Banner */}
             <div className="text-center space-y-3 pt-4 sm:pt-8">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-indigo-50 to-pink-50 dark:from-indigo-950/70 dark:to-pink-950/70 border border-indigo-200/60 dark:border-indigo-800/60 text-indigo-700 dark:text-indigo-300 text-xs sm:text-sm font-bold shadow-sm">
@@ -313,6 +322,7 @@ export default function App() {
 
             {/* Interactive Step Wizard */}
             <WizardForm
+              key={formKey}
               formData={formData}
               setFormData={setFormData}
               onSubmit={handleGeneratePlan}
@@ -325,10 +335,10 @@ export default function App() {
 
           /* VIEW 2: MASTER BLUEPRINT DASHBOARD */
           <div className="space-y-6 animate-fadeIn">
-            
+
             {/* Top Blueprint Summary Bar */}
             <div className="glass-panel p-5 sm:p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
-              
+
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
                   <button
@@ -409,20 +419,18 @@ export default function App() {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all ${
-                      isActive
+                    className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all ${isActive
                         ? "bg-indigo-600 text-white shadow-md shadow-indigo-500/25"
                         : "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
-                    }`}
+                      }`}
                   >
                     <Icon className="w-4 h-4" />
                     <span>{tab.label}</span>
                     {tab.badge && (
-                      <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold ${
-                        isActive
+                      <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold ${isActive
                           ? "bg-indigo-700 text-indigo-100"
                           : "bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300"
-                      }`}>
+                        }`}>
                         {tab.badge}
                       </span>
                     )}

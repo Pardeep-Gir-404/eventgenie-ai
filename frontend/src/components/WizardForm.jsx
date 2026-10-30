@@ -36,8 +36,13 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
     setErrorMsg("");
   };
 
-  const validateCurrentStep = () => {
-    if (activeStep === 1) {
+  // Kisi bhi step ko validate karo (sirf current nahi)
+  const validateStep = (step) => {
+    if (step === 1) {
+      if (!formData.event_type) {
+        setErrorMsg("Please select the type of event.");
+        return false;
+      }
       if (!formData.city || formData.city.trim().length < 2) {
         setErrorMsg("Please specify the city or location for your event.");
         return false;
@@ -46,7 +51,7 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
         setErrorMsg("Please select an event date.");
         return false;
       }
-      const selected = new Date(formData.date);
+      const selected = new Date(`${formData.date}T00:00:00`);
       const today = new Date();
       today.setHours(0, 0, 0, 0);
       if (selected < today) {
@@ -54,18 +59,28 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
         return false;
       }
     }
-    if (activeStep === 2) {
-      if (!formData.guest_count || formData.guest_count < 1) {
+    if (step === 2) {
+      if (!formData.guest_count || Number(formData.guest_count) < 1) {
         setErrorMsg("Please enter a valid guest count (at least 1 attendee).");
         return false;
       }
-      if (!formData.total_budget || formData.total_budget <= 0) {
+      if (!formData.total_budget || Number(formData.total_budget) <= 0) {
         setErrorMsg("Please enter a realistic total budget.");
+        return false;
+      }
+      if (!formData.food_preference) {
+        setErrorMsg("Please choose a food preference.");
+        return false;
+      }
+      if (!formData.setting) {
+        setErrorMsg("Please choose a setting preference.");
         return false;
       }
     }
     return true;
   };
+
+  const validateCurrentStep = () => validateStep(activeStep);
 
   const handleNext = (e) => {
     if (e) e.preventDefault();
@@ -84,13 +99,25 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
     e.preventDefault();
     // Step 3 se pehle kabhi generate nahi hoga (Enter key ya button swap se bhi nahi)
     if (activeStep < 3) return;
-    if (validateCurrentStep()) {
-      onSubmit(formData);
+
+    // Submit se pehle Step 1 aur 2 dobara check karo
+    for (const s of [1, 2]) {
+      if (!validateStep(s)) {
+        setActiveStep(s); // jis step me kami hai wahin wapas le jao
+        return;
+      }
     }
+
+    onSubmit({
+      ...formData,
+      guest_count: Number(formData.guest_count),
+      total_budget: Number(formData.total_budget)
+    });
   };
 
-  // Get today's date as min
-  const todayStr = new Date().toISOString().split('T')[0];
+  // Aaj ki date (local timezone me, UTC nahi) as min
+  const now = new Date();
+  const todayStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
 
   return (
     <div className="w-full glass-panel rounded-3xl p-6 sm:p-8 shadow-xl shadow-indigo-500/5 border border-slate-200 dark:border-slate-800">
@@ -107,15 +134,25 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
               key={s.step}
               type="button"
               onClick={() => {
-                if (s.step < activeStep || validateCurrentStep()) {
+                if (s.step <= activeStep) {
+                  setErrorMsg("");
                   setActiveStep(s.step);
+                  return;
                 }
+                // aage jaana ho to beech ke saare steps validate honge
+                for (let i = activeStep; i < s.step; i++) {
+                  if (!validateStep(i)) {
+                    setActiveStep(i);
+                    return;
+                  }
+                }
+                setActiveStep(s.step);
               }}
               className={`flex-1 text-left pb-2 border-b-2 transition-all ${activeStep === s.step
-                  ? "border-indigo-600 text-indigo-600 dark:text-indigo-400 font-bold"
-                  : activeStep > s.step
-                    ? "border-emerald-500 text-slate-700 dark:text-slate-300 font-medium"
-                    : "border-transparent text-slate-400 dark:text-slate-600 font-normal"
+                ? "border-indigo-600 text-indigo-600 dark:text-indigo-400 font-bold"
+                : activeStep > s.step
+                  ? "border-emerald-500 text-slate-700 dark:text-slate-300 font-medium"
+                  : "border-transparent text-slate-400 dark:text-slate-600 font-normal"
                 }`}
             >
               <span className="text-xs sm:text-sm block">{s.title}</span>
@@ -132,14 +169,14 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} noValidate className="space-y-6">
 
         {/* STEP 1: Event Type, City, Date, Title */}
         {activeStep === 1 && (
           <div className="space-y-6 animate-fadeIn">
             <div>
               <label className="block text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">
-                What type of event are you organizing?
+                What type of event are you organizing? <span className="text-rose-500">*</span>
               </label>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5">
                 {EVENT_TYPES.map((type) => (
@@ -148,8 +185,8 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
                     type="button"
                     onClick={() => handleChange("event_type", type.id)}
                     className={`flex items-center gap-2 p-3 rounded-xl border text-left text-xs sm:text-sm font-medium transition-all ${formData.event_type === type.id
-                        ? "bg-indigo-50 dark:bg-indigo-950/70 border-indigo-500 dark:border-indigo-400 text-indigo-700 dark:text-indigo-300 ring-2 ring-indigo-500/20"
-                        : "bg-white dark:bg-slate-900/60 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-slate-300 dark:hover:border-slate-700"
+                      ? "bg-indigo-50 dark:bg-indigo-950/70 border-indigo-500 dark:border-indigo-400 text-indigo-700 dark:text-indigo-300 ring-2 ring-indigo-500/20"
+                      : "bg-white dark:bg-slate-900/60 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-slate-300 dark:hover:border-slate-700"
                       }`}
                   >
                     <span className="text-lg">{type.icon}</span>
@@ -168,8 +205,7 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
                   <MapPin className="w-4 h-4 absolute left-3.5 top-3.5 text-slate-400" />
                   <input
                     type="text"
-                    required
-                    placeholder="e.g. Jaipur, Bangalore, Mumbai, New York"
+                    placeholder="Enter city"
                     value={formData.city || ""}
                     onChange={(e) => handleChange("city", e.target.value)}
                     className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
@@ -186,7 +222,6 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
                   <Calendar className="w-4 h-4 absolute left-3.5 top-3.5 text-slate-400" />
                   <input
                     type="date"
-                    required
                     min={todayStr}
                     value={formData.date || ""}
                     onChange={(e) => handleChange("date", e.target.value)}
@@ -203,7 +238,7 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
               </label>
               <input
                 type="text"
-                placeholder="e.g. Aarav & Meera's Regal Wedding, TechX Global Summit 2026"
+                placeholder="Enter event title or host names"
                 value={formData.title || ""}
                 onChange={(e) => handleChange("title", e.target.value)}
                 className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
@@ -226,8 +261,7 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
                     type="number"
                     min="1"
                     max="50000"
-                    required
-                    placeholder="e.g. 150"
+                    placeholder="Enter number of guests"
                     value={formData.guest_count || ""}
                     onChange={(e) => handleChange("guest_count", parseInt(e.target.value) || 0)}
                     className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm font-medium"
@@ -257,8 +291,7 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
                       type="number"
                       min="1000"
                       step="500"
-                      required
-                      placeholder="e.g. 1200000"
+                      placeholder="Enter total budget"
                       value={formData.total_budget || ""}
                       onChange={(e) => handleChange("total_budget", parseFloat(e.target.value) || 0)}
                       className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm font-medium"
@@ -279,7 +312,7 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
               <div>
                 <label className="block text-sm font-semibold text-slate-900 dark:text-slate-100 mb-1.5 flex items-center gap-1.5">
                   <UtensilsCrossed className="w-4 h-4 text-indigo-500" />
-                  Food Preference
+                  Food Preference <span className="text-rose-500">*</span>
                 </label>
                 <div className="grid grid-cols-1 gap-2">
                   {FOOD_PREFERENCES.map(food => (
@@ -288,8 +321,8 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
                       type="button"
                       onClick={() => handleChange("food_preference", food.id)}
                       className={`px-3 py-2 rounded-xl text-left text-xs sm:text-sm font-medium border transition ${formData.food_preference === food.id
-                          ? "bg-indigo-50 dark:bg-indigo-950/70 border-indigo-500 text-indigo-700 dark:text-indigo-300 ring-1 ring-indigo-500"
-                          : "bg-white dark:bg-slate-900/60 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300"
+                        ? "bg-indigo-50 dark:bg-indigo-950/70 border-indigo-500 text-indigo-700 dark:text-indigo-300 ring-1 ring-indigo-500"
+                        : "bg-white dark:bg-slate-900/60 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300"
                         }`}
                     >
                       {food.label}
@@ -301,7 +334,7 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
               <div>
                 <label className="block text-sm font-semibold text-slate-900 dark:text-slate-100 mb-1.5 flex items-center gap-1.5">
                   <Building2 className="w-4 h-4 text-indigo-500" />
-                  Setting Preference
+                  Setting Preference <span className="text-rose-500">*</span>
                 </label>
                 <div className="grid grid-cols-1 gap-2">
                   {SETTINGS.map(setting => (
@@ -310,8 +343,8 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
                       type="button"
                       onClick={() => handleChange("setting", setting.id)}
                       className={`px-3 py-2 rounded-xl text-left text-xs sm:text-sm font-medium border transition ${formData.setting === setting.id
-                          ? "bg-indigo-50 dark:bg-indigo-950/70 border-indigo-500 text-indigo-700 dark:text-indigo-300 ring-1 ring-indigo-500"
-                          : "bg-white dark:bg-slate-900/60 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300"
+                        ? "bg-indigo-50 dark:bg-indigo-950/70 border-indigo-500 text-indigo-700 dark:text-indigo-300 ring-1 ring-indigo-500"
+                        : "bg-white dark:bg-slate-900/60 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300"
                         }`}
                     >
                       {setting.label}
@@ -333,7 +366,7 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
               </label>
               <input
                 type="text"
-                placeholder="e.g. Royal Rajasthani Palace, Cyberpunk Neon, Vintage Botanical Garden, Boho Chic"
+                placeholder="Describe your theme or style"
                 value={formData.theme || ""}
                 onChange={(e) => handleChange("theme", e.target.value)}
                 className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
@@ -347,7 +380,7 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
               </label>
               <input
                 type="text"
-                placeholder="e.g. Traditional Marwari & Punjabi customs, South Indian Brahmin rituals, Christian chapel vows"
+                placeholder="Mention any traditions or customs"
                 value={formData.cultural_preferences || ""}
                 onChange={(e) => handleChange("cultural_preferences", e.target.value)}
                 className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
@@ -360,7 +393,7 @@ export default function WizardForm({ formData, setFormData, onSubmit, loading })
               </label>
               <textarea
                 rows="3"
-                placeholder="e.g. Drone photography required, nut allergy menu, eco-friendly zero-plastic setup, live classical flute artist"
+                placeholder="Add any special requests or constraints"
                 value={formData.special_requests || ""}
                 onChange={(e) => handleChange("special_requests", e.target.value)}
                 className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm resize-none"
