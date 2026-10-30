@@ -1,7 +1,31 @@
+# Secrets and environment files
 .env
+.env.*
+!.env.example
 backend/.env
+*.pem
+*.key
+service-account*.json
+
+# Node
 node_modules/
+dist/
+
+# Python
 __pycache__/
 *.pyc
 .pytest_cache/
-dist/
+.coverage
+htmlcov/
+venv/
+.venv/
+
+# Logs and temp
+*.log
+backend_dump.txt
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

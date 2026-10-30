@@ -18,24 +18,33 @@ RUN npm run build
 FROM python:3.12-slim AS production
 
 ENV PYTHONUNBUFFERED=1 \
-    PYTHONDONTWRITEBYTECODE=1 \
-    PORT=8080 \
-    HOST=0.0.0.0
+  PYTHONDONTWRITEBYTECODE=1 \
+  PORT=8080 \
+  HOST=0.0.0.0
 
 WORKDIR /app
 
 # Install curl for container health checks
 RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
 
+# Create an unprivileged user to run the application
+RUN groupadd --system app \
+  && useradd --system --gid app --home-dir /app --no-create-home appuser
+
 # Install Python dependencies
 COPY backend/requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy backend application code
-COPY backend/app ./app
+COPY --chown=appuser:app backend/app ./app
 
 # Copy compiled frontend assets from Stage 1 into /app/static (served by FastAPI)
-COPY --from=frontend-builder /build/dist ./static
+COPY --from=frontend-builder --chown=appuser:app /build/dist ./static
+
+# Let the app create local cache files inside /app if it needs to
+RUN chown appuser:app /app
+
+USER appuser
 
 # Render.com automatically overrides PORT (e.g. 10000); default to 8080 for Cloud Run / local
 EXPOSE 8080

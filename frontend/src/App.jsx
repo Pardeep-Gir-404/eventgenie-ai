@@ -11,9 +11,7 @@ import {
   ArrowLeft,
   DollarSign,
   Users,
-  MapPin,
-  Clock,
-  Printer
+  MapPin
 } from 'lucide-react';
 
 import Navbar from './components/Navbar';
@@ -30,7 +28,7 @@ import ExportShareModal from './components/ExportShareModal';
 import SavedPlansDrawer from './components/SavedPlansDrawer';
 
 import { api } from './services/api';
-import { formatCurrency, getCurrencySymbol } from './utils/currency';
+import { formatCurrency } from './utils/currency';
 
 // Blank form: date "" hone par browser mm/dd/yyyy placeholder dikhata hai
 const EMPTY_FORM = {
@@ -108,7 +106,7 @@ export default function App() {
         spread: 70,
         origin: { y: 0.6 }
       });
-    } catch (e) {
+    } catch {
       // non-critical
     }
   };
@@ -201,14 +199,10 @@ export default function App() {
     }
   };
 
-  const setRegenerateSectionLocal = (name) => {
-    setRegeneratingSection(name);
-  };
-
   // Regenerate Single Creative Section
   const handleRegenerateSection = async (sectionName) => {
     if (!activePlan) return;
-    setRegenerateSectionLocal(sectionName);
+    setRegeneratingSection(sectionName);
     try {
       const res = await api.regenerateSection(sectionName, activePlan);
       const updatedIdeas = { ...activePlan.creative_ideas, [sectionName]: res.new_content };
@@ -218,7 +212,7 @@ export default function App() {
     } catch (err) {
       alert(`Regeneration Error: ${err.message}`);
     } finally {
-      setRegenerateSectionLocal(null);
+      setRegeneratingSection(null);
     }
   };
 
@@ -228,7 +222,7 @@ export default function App() {
     try {
       const updatedPlan = await api.toggleTask(taskId, newStatus);
       setActivePlan(updatedPlan);
-    } catch (err) {
+    } catch {
       // optimistic update locally
       const updatedTasks = activePlan.timeline.tasks.map(t => t.id === taskId ? { ...t, status: newStatus } : t);
       const doneCount = updatedTasks.filter(t => t.status === "Done").length;
@@ -265,7 +259,7 @@ export default function App() {
     setActivePlan(updatedPlan);
     try {
       await api.toggleChecklist(category, itemText, isCompleted);
-    } catch (e) {
+    } catch {
       // silent
     }
   };
@@ -420,16 +414,16 @@ export default function App() {
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
                     className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all ${isActive
-                        ? "bg-indigo-600 text-white shadow-md shadow-indigo-500/25"
-                        : "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
+                      ? "bg-indigo-600 text-white shadow-md shadow-indigo-500/25"
+                      : "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
                       }`}
                   >
                     <Icon className="w-4 h-4" />
                     <span>{tab.label}</span>
                     {tab.badge && (
                       <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold ${isActive
-                          ? "bg-indigo-700 text-indigo-100"
-                          : "bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300"
+                        ? "bg-indigo-700 text-indigo-100"
+                        : "bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300"
                         }`}>
                         {tab.badge}
                       </span>

@@ -4,6 +4,34 @@
 
 const API_BASE = "/api";
 
+/**
+ * Convert a FastAPI error payload into a readable message.
+ * `detail` can be a string, or a list of validation error objects (HTTP 422).
+ */
+function formatErrorDetail(detail, fallback) {
+  if (!detail) return fallback;
+  if (typeof detail === "string") return detail;
+
+  if (Array.isArray(detail)) {
+    const messages = detail
+      .map((item) => {
+        if (typeof item === "string") return item;
+        const field = Array.isArray(item?.loc)
+          ? item.loc.filter((p) => p !== "body").join(" > ")
+          : "";
+        const msg = String(item?.msg || "Invalid value").replace(/^Value error,\s*/i, "");
+        return field ? `${field}: ${msg}` : msg;
+      })
+      .filter(Boolean);
+    return messages.length ? messages.join("\n") : fallback;
+  }
+
+  if (typeof detail === "object") {
+    return detail.message || detail.msg || fallback;
+  }
+  return fallback;
+}
+
 async function request(endpoint, options = {}) {
   const url = `${API_BASE}${endpoint}`;
   const config = {
@@ -17,10 +45,11 @@ async function request(endpoint, options = {}) {
   try {
     const res = await fetch(url, config);
     if (!res.ok) {
-      let errDetail = `Server responded with ${res.status}`;
+      const fallback = `Server responded with ${res.status}`;
+      let errDetail = fallback;
       try {
         const errorJson = await res.json();
-        errDetail = errorJson.detail || errDetail;
+        errDetail = formatErrorDetail(errorJson.detail, fallback);
       } catch (e) {
         // ignore parse error
       }

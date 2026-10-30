@@ -23,7 +23,7 @@ class EventRequest(BaseModel):
     city: str = Field(..., min_length=2, max_length=100, description="City / Location of the event")
     date: str = Field(..., description="Target event date in YYYY-MM-DD format")
     guest_count: int = Field(..., ge=1, le=50000, description="Number of anticipated guests")
-    total_budget: float = Field(..., gt=0, description="Total budget in chosen currency")
+    total_budget: float = Field(..., gt=0, le=1_000_000_000_000, description="Total budget in chosen currency")
     currency: str = Field(default="INR", min_length=2, max_length=5, description="Currency code (e.g., INR, USD, EUR, GBP, AED)")
     theme: Optional[str] = Field(None, max_length=150, description="Event theme or visual vibe")
     food_preference: FoodPreference = Field(default="mixed", description="Food dietary style")
@@ -50,6 +50,14 @@ class EventRequest(BaseModel):
         v_clean = v.strip()
         if not v_clean:
             raise ValueError("City cannot be empty")
+        return v_clean
+
+    @field_validator("currency")
+    @classmethod
+    def normalize_currency(cls, v: str) -> str:
+        v_clean = v.strip().upper()
+        if not v_clean.isalpha():
+            raise ValueError("Currency must contain letters only (e.g. INR, USD)")
         return v_clean
 
 class BudgetItem(BaseModel):

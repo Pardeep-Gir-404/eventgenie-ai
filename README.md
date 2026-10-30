@@ -6,7 +6,7 @@
 [![Google GenAI](https://img.shields.io/badge/Google%20GenAI-Gemini%202.5-orange.svg)](https://aistudio.google.com/)
 [![React](https://img.shields.io/badge/React-19.3-61dafb.svg)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4-38bdf8.svg)](https://tailwindcss.com/)
-[![Tests](https://img.shields.io/badge/Tests-15%2F15%20Passing-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/Tests-19%2F19%20Passing-brightgreen.svg)]()
 
 ---
 
@@ -30,7 +30,7 @@ Planning weddings, milestones, college fests, and community celebrations is stre
 ```mermaid
 graph TD
     Client["React 19 + Tailwind v4 Client\n(SPA Wizard, Donut Chart, Chat Refiner)"]
-    FastAPI["FastAPI Backend Gateway\n(CORS, Rate Limiting, Input Sanitization)"]
+    FastAPI["FastAPI Backend Gateway\n(Restricted CORS, Security Headers, Input Sanitization)"]
     Guardrails["Guardrail & Safety Engine\n(Regex Injection Defense, Bounds Check)"]
     GeminiChain["Gemini GenAI Multi-Step Chain\n(Context Enrichment -> Plan Gen -> Self-Check Pass)"]
     MathService["Deterministic Budget Engine\n(100% Sum Normalization, 5-10% Buffer, Savings)"]
@@ -53,7 +53,7 @@ graph TD
 
 ## 3. Key Features
 
-1. **AI Event Planner Wizard**: Form validation for event type, city/location, date, guest count, total budget, currency, theme, food preference (veg/non-veg/mixed/jain), setting (indoor/outdoor/hybrid), and cultural nuances.
+1. **AI Event Planner Wizard**: Form validation for event type, city/location, date, guest count, total budget, currency, theme, food preference (veg/non-veg/mixed/jain), setting (indoor/outdoor/hybrid), and cultural nuances. Every new plan starts from a clean, empty form.
 2. **Deterministic Smart Budget**:
    - Normalized strictly to 100%.
    - Enforced 5% - 10% contingency buffer.
@@ -89,7 +89,7 @@ Event Planner/
 ├── backend/
 │   ├── app/
 │   │   ├── __init__.py
-│   │   ├── main.py                  # FastAPI server, static SPA mount, routes
+│   │   ├── main.py                  # FastAPI server, CORS, security headers, static SPA mount
 │   │   ├── config.py                # Environment configuration & settings
 │   │   ├── schemas/
 │   │   │   ├── plan.py              # Pydantic models for request, budget, timeline, ideas
@@ -113,6 +113,7 @@ Event Planner/
 │   │   ├── test_budget.py           # Unit tests for budget math
 │   │   ├── test_timeline.py         # Unit tests for timeline date logic
 │   │   ├── test_schemas.py          # Schema validation tests
+│   │   ├── test_security.py         # Security headers, CORS & path traversal tests
 │   │   └── test_api.py              # End-to-end integration tests
 │   ├── requirements.txt             # Python backend dependencies
 │   ├── Dockerfile.dev               # Local development container
@@ -143,7 +144,7 @@ Event Planner/
 │   │   └── utils/
 │   │       ├── currency.js          # INR & global currency formatting
 │   │       └── calendar.js          # Date helpers
-├── Dockerfile                       # Multi-stage production container
+├── Dockerfile                       # Multi-stage production container (non-root)
 ├── docker-compose.yml               # Compose file for containerized execution
 ├── deploy.sh                        # Bash Cloud Run deployment script
 ├── deploy.ps1                       # PowerShell Cloud Run deployment script
@@ -169,10 +170,15 @@ cp backend/.env.example backend/.env
 ```
 Edit `backend/.env` and insert your `GEMINI_API_KEY`:
 ```ini
-GEMINI_API_KEY=AIzaSy...
+GEMINI_API_KEY=your_api_key_here
 GEMINI_MODEL=gemini-2.5-flash
 ```
 *(Note: If no API key is provided, EventGenie AI's autonomous offline engine will seamlessly generate realistic, culturally rich plans for instant evaluation).*
+
+Optional: to allow extra browser origins to call the API, set a comma-separated list:
+```ini
+ALLOWED_ORIGINS=https://your-frontend.example.com
+```
 
 ### Step 2: Install Backend Dependencies & Run Tests
 ```bash
@@ -180,7 +186,7 @@ cd backend
 python -m pip install -r requirements.txt
 python -m pytest tests
 ```
-*Expected: 15 passed in ~1.6s.*
+*Expected: 19 passed.*
 
 ### Step 3: Run the Development Servers
 **Terminal 1 (Backend FastAPI):**
@@ -257,13 +263,26 @@ gcloud run deploy eventgenie-ai \
 
 ---
 
+## 7b. Security Measures
+
+- **Restricted CORS**: only trusted origins are allowed (configurable via the `ALLOWED_ORIGINS` environment variable); credentials are disabled.
+- **Security headers**: `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy` and `Permissions-Policy` are set on every response.
+- **Path traversal protection**: static file serving resolves paths and refuses anything outside the build directory.
+- **Input guardrails**: prompt-injection defense and bounds checking before any request reaches the LLM.
+- **Secrets hygiene**: API keys are read from environment variables only; `.env` files are git-ignored and `.env.example` documents required variables.
+- **Safe error handling**: unhandled errors return a generic message while details are logged server-side only.
+- **Least privilege container**: the production image runs as a non-root user.
+- **Automated security tests**: `backend/tests/test_security.py` verifies headers, CORS behavior, and traversal protection.
+
+---
+
 ## 8. What Makes EventGenie AI Stand Out (Judging Criteria)
 
 | Criteria | How EventGenie AI Excels |
 | :--- | :--- |
 | **Innovation** | Bridges the gap between creative LLM reasoning and mathematical precision. Eliminates LLM calculation hallucination by delegating all arithmetic to deterministic Python services. |
 | **GenAI Depth** | Multi-step generation chain: (1) context & cultural enrichment, (2) structured JSON output with Pydantic validation, (3) automated self-check validation pass, (4) conversational structured patch refiner. |
-| **Technical Execution** | Full-stack production quality: React 19, Tailwind v4, FastAPI, Firestore with offline fallback, 15/15 unit & integration tests, and multi-stage Cloud Run Dockerfile. |
+| **Technical Execution** | Full-stack production quality: React 19, Tailwind v4, FastAPI, Firestore with offline fallback, 19/19 unit, integration & security tests, and multi-stage Cloud Run Dockerfile. |
 | **UX & Design** | Celebratory glassmorphism UI, interactive SVG Donut Chart, animated streaming progress steps, one-click demo scenarios, and dark/light modes. |
 | **Real-World Impact** | Solves a real problem faced by millions of event hosts. Replaces chaotic spreadsheets and WhatsApp threads with actionable schedules and vendor inquiry links. |
 | **Scalability** | Stateless API architecture ready for horizontal autoscaling on Google Cloud Run with minimal resource footprint (1 CPU, 1GB RAM). |
